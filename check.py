@@ -82,7 +82,7 @@ e = 2 - 6 * x**2 + 4 * x**3
 out.append(('2 - 6x^2 + 4x^3: mass, mean, u, v, w', *mass_mean(e), sp.diff(e, x).subs(x, 0),
             -sp.diff(e, x).subs(x, 1), e.subs(x, 1)))
 
-# Remark 3.2: H = c K + (1-c) D with K concave on [0,b], D nonincreasing on [0,1], both with mean 1/3.
+# Proposition 3.2: H = lambda K + (1-lambda) D with K concave on [0,b], D nonincreasing on [0,1], both with mean 1/3.
 s = sp.symbols('s')
 Hx = sp.Rational(4, 3) * (1 - x)**2 * (1 + 5 * x)
 Hpx = sp.diff(Hx, x)
