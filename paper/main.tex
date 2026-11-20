@@ -31,9 +31,10 @@
 A distribution is $3$-completely mixable if it is the common distribution
 of three random variables whose sum is constant. We show that every unimodal
 probability density on $[0,1]$ that is a polynomial of degree at most three
-and has mean $1/3$, the smallest mean the mean condition allows, is
+and has mean $1/3$, the smallest mean of a $3$-completely mixable
+distribution whose support has endpoints $0$ and $1$, is
 $3$-completely mixable. Such a density is either decreasing, and then
-completely mixable by a theorem of Wang and Wang, or a convex combination of
+$3$-completely mixable by a theorem of Wang and Wang, or a mixture of
 two decreasing densities and one explicit $3$-completely mixable density with
 an interior mode. Every $3$-completely mixable density $f$ on $[0,1]$ with mean
 $1/3$ that is continuous at $0$ and $1$ satisfies $f(0)\ge4f(1)$; the norm
@@ -117,39 +118,40 @@ reflection $x\mapsto1-x$, both theorems hold at the other boundary mean
 $2/3$, and by affine maps at the boundary means of any interval $[a,b]$.
 
 We call a density on $[0,1]$ that is a polynomial of degree at most three a
-\emph{cubic density}. None of the sufficient conditions above applies
-directly to a unimodal cubic density $g$ with mean $1/3$ and a mode in
-$(0,1)$. Such a $g$ is not monotone. It is not symmetric and not bounded
-below by $1$, because a density on $[0,1]$ with either property has mean
-$1/2$, and it is not concave, because the only concave density on $[0,1]$
-with mean $1/3$ is $2(1-x)$ (Remark~\ref{rem:concave}). Two results of Wang
-and Wang reduce Theorem~\ref{thm:main} to a single density with an interior
-mode: the theorem on monotone densities, and the convexity of the set of
-$n$-CM distributions with a given mean~\cite[Proposition~2.1(3)]{WW11}. If
-$g$ is a cubic density with mean $1/3$ and $u=g'(0)$, $v=-g'(1)$, $w=g(1)$,
-then (Proposition~\ref{prop:decomp})
+\emph{cubic density}. Let $g$ be a unimodal cubic density with mean $1/3$
+and a mode in $(0,1)$. No density in the classes above has these
+properties. It is not monotone. It is neither symmetric nor bounded below
+by $1$, because a density on $[0,1]$ with either property has mean $1/2$.
+It is not concave, because the only concave density on $[0,1]$ with mean
+$1/3$ is $2(1-x)$ (Remark~\ref{rem:concave}). What the known results do
+give is convexity: the $n$-CM distributions with a given mean form a
+convex set~\cite[Proposition~2.1(3)]{WW11}. So it suffices to write $g$ as
+a mixture of $3$-CM densities with mean $1/3$. Put $u=g'(0)$, $v=-g'(1)$
+and $w=g(1)$. Unimodality with an interior mode gives $u,v\ge0$, and
+$w\ge0$ because $g$ is a density. Comparing coefficients
+(Proposition~\ref{prop:decomp}) gives
 \[
 g=\frac{3v}4A+6wB+\frac u4H,\qquad\frac{3v}4+6w+\frac u4=1,
 \]
-where
+with
 \[
 A(x)=\tfrac{16}9-4x^2+\tfrac{20}9x^3,\qquad
 B(x)=\tfrac{11}6-5x^2+\tfrac{10}3x^3,\qquad
 H(x)=\tfrac43(1-x)^2(1+5x).
 \]
-The densities $A$ and $B$ are decreasing with mean $1/3$, and $w\ge0$, so
-when $u$ and $v$ are nonnegative, $g$ is a convex combination of two
-decreasing densities and $H$. The density $H$ increases on $[0,1/5]$ and
-decreases on $[1/5,1]$. It is $3$-CM: put the coordinates of a
-Dirichlet$(2,2,1)$ vector in uniformly random order, and each coordinate of
-the result has density $H$ (Lemma~\ref{lem:H}). The density $H$ is also a
-mixture of a concave density on an interval $[0,\beta]$ with $\beta<1$ and a
-nonincreasing density on $[0,1]$, both with mean $1/3$
-(Proposition~\ref{prop:mixture}). So its complete mixability, and with it
-Theorem~\ref{thm:main}, also follows from the identity above, the theorem of
-Puccetti, Wang and Wang on concave densities~\cite[Theorem~4.2]{PWW12}, the
-theorem of Wang and Wang on monotone densities and convexity; Lemma~\ref{lem:H} gives the
-coupling explicitly.
+The densities $A$ and $B$ are decreasing with mean $1/3$, so they are
+$3$-CM by the theorem of Wang and Wang. Theorem~\ref{thm:main} therefore
+reduces to the single density $H$, which increases on $[0,1/5]$ and
+decreases on $[1/5,1]$. If the coordinates of a Dirichlet$(2,2,1)$ vector
+are put in uniformly random order, each coordinate of the result has
+density $H$, and the three coordinates sum to $1$, so $H$ is $3$-CM
+(Lemma~\ref{lem:H}). The density $H$ is also a mixture of a concave
+density on $[0,\beta]$, $\beta\approx0.907$, and a nonincreasing density
+on $[0,1]$, both with mean $1/3$ (Proposition~\ref{prop:mixture}). The
+theorem of Puccetti, Wang and Wang on concave
+densities~\cite[Theorem~4.2]{PWW12}, applied to the first part, the
+theorem of Wang and Wang on monotone densities, applied to the second, and
+convexity give a second proof that $H$ is $3$-CM.
 
 Every $3$-CM density $f$ on $[0,1]$ with mean $1/3$ that is continuous at
 $0$ and $1$ satisfies $f(0)\ge2f(1)$. This follows from the norm condition
@@ -163,7 +165,7 @@ inequalities the \emph{endpoint conditions}. The quadratic density
 $r(x)=3-8x+6x^2$ satisfies the first and violates the second. So the unimodality assumption in Theorem~\ref{thm:main} cannot
 be dropped; see Section~\ref{sec:examples}.
 
-\section{Known results}
+\section{Preliminaries}
 
 \begin{lemma}[{\cite[Theorem~2.4]{WW11}}]\label{lem:monotone}
 If $f$ is a nonincreasing probability density on $[0,1]$ with mean at least
@@ -183,7 +185,7 @@ the constant sum divided by $n$; for an $n$-CM distribution with finite mean
 the center is the mean~\cite[Proposition~2.1(2)]{WW11}. One proof of
 Lemma~\ref{lem:convex} is to choose between the two couplings by an
 independent coin; the sum is $n\mu$ in both cases. By induction the lemma
-extends to finite convex combinations.
+extends to finite mixtures.
 
 \begin{remark}\label{rem:concave}
 A concave density $f$ on $[0,1]$ with mean $1/3$ equals $2(1-x)$. For
@@ -251,11 +253,11 @@ Dirichlet$(2,2,1)$ vector with its coordinates put in uniformly random
 order.
 
 \begin{proposition}\label{prop:mixture}
-Let $\beta$ be the root in $(9/10,19/20)$ of
+Let $\beta$ be a root in $(9/10,19/20)$ of
 \[
 Q(\sigma)=4375\sigma^4-11000\sigma^3+9425\sigma^2-3240\sigma+432;
 \]
-it is the only root there, and $\beta\approx0.90702$. Then $H=\lambda K+(1-\lambda)D$ for
+numerically $\beta\approx0.90702$. Then $H=\lambda K+(1-\lambda)D$ for
 some $\lambda\in(0,1)$, where $K$ is a concave probability density on $[0,\beta]$ and
 $D$ is a nonincreasing probability density on $[0,1]$, both with mean $1/3$.
 Consequently $H$ is $3$-CM by~\cite[Theorem~4.2]{PWW12},
@@ -278,8 +280,12 @@ H(x)-H(x_\sigma)-H'(\sigma)(\sigma-x_\sigma), & 0\le x\le x_\sigma,\\
 and $\delta_\sigma=H-\kappa_\sigma$. The two formulas for $\kappa_\sigma$ agree at $x_\sigma$,
 and so do their derivatives, both equal to $H'(\sigma)$. Since $H''<0$ on
 $[0,3/5)\supset[0,x_\sigma]$, the function $\kappa_\sigma$ is concave on $[0,\sigma]$. It
-vanishes at $\sigma$, and $\kappa_\sigma(0)>0$: as a polynomial in $\sigma$, $\kappa_\sigma(0)$
-equals $27/50$ at $\sigma=9/10$ and has no root in $[9/10,19/20]$. So
+vanishes at $\sigma$, and $\kappa_\sigma(0)>0$, since
+\[
+\kappa_\sigma(0)=-\tfrac4{75}\bigl(625\sigma^3-1125\sigma^2+615\sigma-108\bigr)
+\]
+equals $27/50$ at $\sigma=9/10$ and its only real root is
+$\sigma\approx0.9677>19/20$. So
 $\kappa_\sigma>0$ on $[0,\sigma)$. The function $\delta_\sigma$ is constant on $[0,x_\sigma]$,
 has derivative $H'(x)-H'(\sigma)\le0$ on $[x_\sigma,\sigma]$, and equals $H$ on $[\sigma,1]$,
 where $H$ is nonincreasing. Being continuous, $\delta_\sigma$ is nonincreasing on
@@ -290,12 +296,11 @@ Exact integration gives
 \int_0^1x\kappa_\sigma(x)\,dx-\frac13\int_0^1\kappa_\sigma(x)\,dx
 =-\frac{2(5\sigma-1)Q(\sigma)}{9375}.
 \]
-Since $Q(9/10)=27/16$ and $Q(19/20)=-1945/256$, and $Q$ has exactly one root
-in $[9/10,19/20]$, the root $\beta$ exists and is unique there, and $\kappa_\beta$
-has mean $1/3$ after normalization. The integral $\lambda=\int_0^1\kappa_\beta$ is a
-value of a polynomial in $\sigma$ that equals $999/2000$ at $\sigma=9/10$ and
-$1891/6400$ at $\sigma=19/20$ and takes neither the value $0$ nor the value $1$
-on $[9/10,19/20]$; so $0<\lambda<1$. Put $K=\kappa_\beta/\lambda$ and $D=\delta_\beta/(1-\lambda)$.
+Since $Q(9/10)=27/16$ and $Q(19/20)=-1945/256$, a root $\beta$ exists, and
+$\kappa_\beta$ has mean $1/3$ after normalization. Put
+$\lambda=\int_0^1\kappa_\beta$. Then $\lambda>0$ because $\kappa_\beta>0$ on
+$[0,\beta)$, and $1-\lambda=\int_0^1\delta_\beta>0$ because $\delta_\beta\ge0$
+and $\delta_\beta=H>0$ on $(\beta,1)$; so $0<\lambda<1$. Put $K=\kappa_\beta/\lambda$ and $D=\delta_\beta/(1-\lambda)$.
 Then $K$ is a concave density on $[0,\beta]$ with mean $1/3$. Since $H$ has mean
 $1/3$, so does $D$, and $D$ is nonincreasing on $[0,1]$. By~\cite[Theorem~4.2]{PWW12}
 $K$ is $3$-CM, by Lemma~\ref{lem:monotone} $D$ is $3$-CM, and by
@@ -314,7 +319,7 @@ is $3$-CM.
 \begin{proof}
 Both identities in~\eqref{eq:decomp} follow by comparing coefficients
 of~\eqref{eq:general}. If $u,v,w\ge0$, then~\eqref{eq:decomp} writes $g$ as
-a convex combination of $A$, $B$ and $H$, which are $3$-CM with mean
+a mixture of $A$, $B$ and $H$, which are $3$-CM with mean
 $1/3$ by Lemmas~\ref{lem:monotone} and~\ref{lem:H}. Lemma~\ref{lem:convex}
 completes the proof.
 \end{proof}
@@ -356,6 +361,9 @@ Section~\ref{sec:examples} is one of them, and it is not $3$-CM.
 \end{remark}
 
 \section{Two endpoint conditions}
+
+We write $x_+=\max\{x,0\}$, $x_-=\max\{-x,0\}$ and $\mathbf 1\{\cdot\}$ for
+the indicator of an event.
 
 \begin{lemma}\label{lem:necessary}
 Let $X_1,X_2,X_3$ be random variables with values in $[0,1]$, each with
@@ -430,10 +438,10 @@ that $s'=t$. This gives
 and, as in the proof above, $f(0)\ge2f(1)$. Inequality~\eqref{eq:nec2}
 removes the factor $2$ in this case, and the example $r$ of
 Section~\ref{sec:examples} satisfies~\eqref{eq:wang} for every
-$t\in(0,1/4)$ but not~\eqref{eq:nec2}. In the proof of~\eqref{eq:nec2} the
-bound $(X_i-(1-2t))_+\le\sum_{j\ne i}(t-X_j)_+$ is needed for one index $i$
-only, since for $t<1/4$ at most one coordinate exceeds $1-2t$; summed over
-all three indices it gives only~\eqref{eq:wang}.
+$t\in(0,1/4)$ but not~\eqref{eq:nec2}. Summing the pointwise bound
+$(X_i-(1-2t))_+\le\sum_{j\ne i}(t-X_j)_+$ over $i=1,2,3$
+gives~\eqref{eq:wang}. For $t<1/4$ at most one $X_i$ exceeds $1-2t$, so
+one index suffices, and this gives~\eqref{eq:nec2}.
 
 \section{Examples}\label{sec:examples}
 
@@ -449,16 +457,17 @@ p_0(x)=\frac x{101}\bigl(2360-8070x+9360x^2-3645x^3\bigr).
 \end{equation}
 Then $\int_0^1p_0=1$, $\int_0^1xp_0(x)\,dx=1/3$, and
 \begin{equation}\label{eq:hprime}
-p_0'(x)=-\frac{20}{101}(9x-2)P(x),\qquad P(x)=81x^2-138x+59.
+p_0'(x)=-\frac{20}{101}(9x-2)R(x),\qquad R(x)=81x^2-138x+59.
 \end{equation}
-Since $P(x)=81\bigl(x-\tfrac{23}{27}\bigr)^2+\tfrac29>0$, the polynomial $p_0$
+Since $R(x)=81\bigl(x-\tfrac{23}{27}\bigr)^2+\tfrac29>0$, the polynomial $p_0$
 increases on $[0,2/9]$ and decreases on $[2/9,1]$. With $p_0(0)=0$ and
 $p_0(1)=5/101$, this shows that $p_0$ is nonnegative on $[0,1]$, so it is a
 unimodal probability density with mean $1/3$. It violates $f(0)\ge2f(1)$,
 so it is not $3$-CM by Lemma~\ref{lem:necessary}, or by~\eqref{eq:wang}.
 
-To obtain a strictly positive example, mix in a small amount of the
-decreasing density $2(1-x)$, which has mean $1/3$:
+To obtain a strictly positive example, take the mixture of $p_0$ with
+the decreasing density $2(1-x)$, which has mean $1/3$, with weights
+$99/100$ and $1/100$:
 \begin{equation}\label{eq:p}
 p(x)=\frac{99}{100}p_0(x)+\frac1{100}\cdot2(1-x).
 \end{equation}
@@ -466,9 +475,9 @@ p(x)=\frac{99}{100}p_0(x)+\frac1{100}\cdot2(1-x).
 \begin{proof}[Proof of Theorem~\ref{thm:sharp}]
 The polynomial $p$ has degree four, integral $1$ and mean $1/3$. On
 $[2/9,1]$ both $p_0$ and $2(1-x)$ are decreasing, so $p'<0$ there. On
-$[0,2/9]$ we have $P>0$ and $P'(x)=162x-138<0$, so
+$[0,2/9]$ we have $P>0$ and $R'(x)=162x-138<0$, so
 \[
-p_0''(x)=-\frac{20}{101}\bigl(9P(x)+(9x-2)P'(x)\bigr)<0,
+p_0''(x)=-\frac{20}{101}\bigl(9R(x)+(9x-2)R'(x)\bigr)<0,
 \]
 and $p'$ is strictly decreasing on $[0,2/9]$. As $p'(0)=116719/5050>0$
 and $p'(2/9)=-1/50<0$, the polynomial $p$ has exactly one critical point
@@ -506,7 +515,8 @@ Proposition~\ref{prop:decomp} does not apply.
 
 At the boundary mean $1/n$ with $n\ge4$ the analogue of
 Theorem~\ref{thm:main} holds for a simpler reason. For a cubic density $g$
-on $[0,1]$ with mean $\mu$, let $u=g'(0)$, $v=-g'(1)$ and $w=g(1)$;
+on $[0,1]$ with mean $\mu$, with $u=g'(0)$, $v=-g'(1)$ and $w=g(1)$ as in
+the introduction,
 comparing coefficients gives $u/4+3v/4+6w=30\mu-9$. A unimodal cubic
 density with mode in $(0,1)$ has $u,v,w\ge0$, so its mean is at least
 $3/10>1/4$. Hence a unimodal cubic density with mean $1/n\le1/4$ has mode
@@ -537,17 +547,19 @@ The author holds equity in Heights Labs and in Convex Nexus Capital and has a ma
 
 \section*{Declaration of generative AI and AI-assisted technologies}
 
-This paper is part of a broader research project on proving open problems with AI systems. The work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}; the method is described in~\cite{MathBrainPaper}. OpenAI's Codex (GPT-6.1) proposed the decomposition of Proposition~\ref{prop:decomp}, the coupling of Lemma~\ref{lem:H}, the proofs of Lemma~\ref{lem:necessary} and the examples of Section~\ref{sec:examples}. A second Codex run audited them. A Claude audit run pointed out the mixture of Proposition~\ref{prop:mixture}. Anthropic's Claude (Opus~5.5) checked every identity in exact arithmetic, read the cited results at their sources, and wrote the text. The theorem on monotone densities and the convexity used here are due to Wang and Wang~\cite{WW11}, and the theorem on concave densities to Puccetti, Wang and Wang~\cite{PWW12}. The question is Open Problem~10 of Wang~\cite{Wan15}. The new results are the identity~\eqref{eq:decomp}, which reduces every unimodal cubic density with mean $1/3$ to $A$, $B$ and $H$, the explicit coupling of Lemma~\ref{lem:H}, inequality~\eqref{eq:nec2} and the examples of Section~\ref{sec:examples}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+This paper is part of a broader research project on proving open problems with AI systems. The work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}; the method is described in~\cite{MathBrainPaper}. OpenAI's Codex (GPT-6.1) proposed the decomposition of Proposition~\ref{prop:decomp}, the coupling of Lemma~\ref{lem:H}, the proofs of Lemma~\ref{lem:necessary} and the examples of Section~\ref{sec:examples}. A second Codex run audited them. A Claude audit run proposed the mixture of Proposition~\ref{prop:mixture}. Anthropic's Claude (Opus~5.5) checked every identity in exact arithmetic, read the cited results at their sources, and wrote the text. The theorem on monotone densities and the convexity used here are due to Wang and Wang~\cite{WW11}, and the theorem on concave densities to Puccetti, Wang and Wang~\cite{PWW12}. The question is Open Problem~10 of Wang~\cite{Wan15}. The new results are the identity~\eqref{eq:decomp}, which reduces every unimodal cubic density with mean $1/3$ to $A$, $B$ and $H$, the explicit coupling of Lemma~\ref{lem:H}, inequality~\eqref{eq:nec2} and the examples of Section~\ref{sec:examples}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
 \section*{Data and code availability}
 
-The script \texttt{check.py}, at \url{https://github.com/yspennstate/unimodal-cubic-complete-mixability/tree/b95af7b0d6c716f6185ed64dac2a622bb0bb3b63}, verifies in exact rational arithmetic the identities~\eqref{eq:general} and~\eqref{eq:decomp}, the marginal in Lemma~\ref{lem:H}, the facts used in the proof of Proposition~\ref{prop:mixture} and the values in Sections~\ref{sec:examples} and~\ref{sec:remarks}.
+The script \texttt{check.py}, at \url{https://github.com/yspennstate/unimodal-cubic-complete-mixability/tree/3a9742e9fedb9997f3ddfd2070427a26602310e8}, verifies in exact rational arithmetic the identities~\eqref{eq:general} and~\eqref{eq:decomp}, the marginal in Lemma~\ref{lem:H}, the facts used in the proof of Proposition~\ref{prop:mixture} and the values in Sections~\ref{sec:examples} and~\ref{sec:remarks}.
 
 \begin{thebibliography}{99}
 
 \bibitem{BJW14} C.~Bernard, X.~Jiang and R.~Wang, \emph{Risk aggregation with dependence uncertainty}, Insurance Math. Econom. \textbf{54} (2014), 93--108. doi:10.1016/j.insmatheco.2013.11.005.
 
 \bibitem{GR81} N.~Gaffke and L.~R\"uschendorf, \emph{On a class of extremal problems in statistics}, Math. Operationsforsch. Statist. Ser. Optim. \textbf{12} (1981), 123--135. doi:10.1080/02331938108842712.
+
+\bibitem{KS06} M.~Knott and C.~S.~Smith, \emph{Choosing joint distributions so that the variance of the sum is small}, J. Multivariate Anal. \textbf{97} (2006), 1757--1765. doi:10.1016/j.jmva.2006.01.004.
 
 \bibitem{PW15} G.~Puccetti and R.~Wang, \emph{Detecting complete and joint mixability}, J. Comput. Appl. Math. \textbf{280} (2015), 174--187. doi:10.1016/j.cam.2014.11.050.
 
@@ -557,17 +569,15 @@ The script \texttt{check.py}, at \url{https://github.com/yspennstate/unimodal-cu
 
 \bibitem{RU02} L.~R\"uschendorf and L.~Uckelmann, \emph{Variance minimization and random variables with constant sum}, in: Distributions with Given Marginals and Statistical Modelling, Kluwer, Dordrecht, 2002, 211--222. doi:10.1007/978-94-017-0061-0\_22.
 
-\bibitem{KS06} M.~Knott and C.~S.~Smith, \emph{Choosing joint distributions so that the variance of the sum is small}, J. Multivariate Anal. \textbf{97} (2006), 1757--1765. doi:10.1016/j.jmva.2006.01.004.
-
 \bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain}, public repository, 2026, \url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
 
 \bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, doi:10.5281/zenodo.24150837, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
 
 \bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
 
-\bibitem{Wan15} R.~Wang, \emph{Current open questions in complete mixability}, Probab. Surv. \textbf{12} (2015), 13--32. doi:10.1214/14-PS250.
-
 \bibitem{WW11} B.~Wang and R.~Wang, \emph{The complete mixability and convex minimization problems with monotone marginal densities}, J. Multivariate Anal. \textbf{102} (2011), 1344--1360. doi:10.1016/j.jmva.2011.05.002.
+
+\bibitem{Wan15} R.~Wang, \emph{Current open questions in complete mixability}, Probab. Surv. \textbf{12} (2015), 13--32. doi:10.1214/14-PS250.
 
 \bibitem{YZ17} C.~Yin and D.~Zhu, \emph{Joint mixability of elliptical distributions and related families}, preprint, arXiv:1706.05499v4, 2023.
 
