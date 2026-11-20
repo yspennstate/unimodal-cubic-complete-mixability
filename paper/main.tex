@@ -74,15 +74,15 @@ R\"uschendorf and Uckelmann~\cite{RU02} showed that a symmetric unimodal
 density is $n$-CM for $n\ge2$; see~\cite[Theorem~2.2]{WW11} for the statement
 in this form.
 Unimodality cannot be dropped there: Yin and Zhu~\cite[Example~2.3]{YZ17}
-show that the symmetric density proportional to $x^{2r}$ on $[-1,1]$,
-$r\ge1$, is not $3$-CM.
+show that the symmetric density proportional to $x^{2k}$ on $[-1,1]$,
+$k\ge1$, is not $3$-CM.
 Puccetti, Wang and Wang proved that a concave density on a bounded interval
 is $n$-CM for $n\ge3$~\cite[Theorem~4.2]{PWW12}, and that a density bounded
 below by $3/(n(b-a))$ on $[a,b]$ is $n$-CM, again for
 $n\ge3$~\cite[Theorem~3.4]{PWW13}.
 They also suggested~\cite[Section~6]{PWW12} that their methods
 might yield the complete mixability of unimodal asymmetric distributions.
-Puccetti and Wang~\cite[Section~3, Tables~3 and~4]{PW15} gave numerical evidence that the mean
+Puccetti and Wang~\cite[Tables~3 and~4]{PW15} gave numerical evidence that the mean
 condition is not sufficient for unimodal densities, with truncated
 lognormal distributions and $n=3$; an explicit example is in
 Theorem~\ref{thm:sharp} below. Open Problem~10 of~\cite{Wan15} asks:
@@ -166,7 +166,7 @@ inequalities the \emph{endpoint conditions}. The tail inequalities of Komisarski
 and Labuschagne~\cite[Corollary~2]{KL24} for variables with constant sum
 give $f(0)\ge f(1)$ (Section~\ref{sec:endpoint}). The quadratic density
 $r(x)=3-8x+6x^2$ satisfies the first endpoint condition and violates the second. So the unimodality assumption in Theorem~\ref{thm:main} cannot
-be dropped; see Section~\ref{sec:examples}. It is shown in~\cite[Proposition~3.1]{Shm26} that for bounded laws the
+be dropped; see Section~\ref{sec:examples}. It is shown in~\cite[Proposition~3.1]{Shm26} that for bounded distributions the
 whole family of Wang's norm inequalities reduces to its $L^1$ case, and
 in~\cite[Theorem~1.4]{Shm26} that it does not imply $n$-complete
 mixability for $n=3,4$; the examples there are excluded by
@@ -211,7 +211,7 @@ $(0,1/3)$ and positive on $(1/3,1)$. Hence
 =\int_0^1\omega(x)\bigl(\varphi(x)-\varphi(\tfrac13)\bigr)\,dx,
 \]
 and the integrand is nonnegative. So $\varphi$ is constant on $(0,1)$, and
-$f=c(1-x)$ with $c=2$ because $\int_0^1f=1$.
+$f(x)=2(1-x)$ because $\int_0^1f=1$.
 \end{remark}
 
 \section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
@@ -222,7 +222,7 @@ and $d$, as
 \begin{equation}\label{eq:general}
 g(x)=2+\frac c6+\frac d5-\Bigl(2+c+\frac{9d}{10}\Bigr)x+cx^2+dx^3.
 \end{equation}
-Set
+With $u$, $v$, $w$ as in the introduction, \eqref{eq:general} gives
 \begin{equation}\label{eq:uvw}
 u=g'(0)=-2-c-\frac{9d}{10},\qquad v=-g'(1)=2-c-\frac{21d}{10},\qquad
 w=g(1)=\frac c6+\frac{3d}{10}.
@@ -435,7 +435,7 @@ stronger one.
 
 Komisarski and Labuschagne~\cite[Corollary~2]{KL24} prove tail
 inequalities for random variables with constant sum: if
-$X_1+\dots+X_n=t$, then $\sum_{j\ne i}\PP(X_j<a_j)\ge\PP\bigl(X_i>t-\sum_{j\ne i}a_j\bigr)$
+$X_1+\dots+X_n=\tau$, then $\sum_{j\ne i}\PP(X_j<a_j)\ge\PP\bigl(X_i>\tau-\sum_{j\ne i}a_j\bigr)$
 for all real $a_1,\dots,a_n$ and every $i$; their Remark~1 derives
 from it the bounds on the center of a complete mix. For three variables with
 distribution $F$ and sum $1$, thresholds $a_j=a_k=\varepsilon$ give
@@ -462,17 +462,17 @@ gives~\eqref{eq:wang}. For $t<1/4$ at most one $X_i$ exceeds $1-2t$, so
 one index suffices, and this gives~\eqref{eq:nec2}.
 
 The example $r$ satisfies Wang's norm inequalities for every law-determined norm
-and every $s$, not only~\eqref{eq:wang}. For a bounded law it is enough to
+and every $s$, not only~\eqref{eq:wang}. For a bounded distribution it is enough to
 check $\|(X-s)_+\|\le(n-1)\|(X-s')_-\|$ for the $L^1$ norm and every real
 $s$~\cite[Proposition~3.1]{Shm26}; it then says that $X$ is dominated by
 $n\mu-(n-1)X$ in the convex order~\cite[Theorem~1.3]{Shm26}. With $n=3$,
-$\mu=1/3$ and $s=c$ it reads $\E(X-c)_+\le\E(1-2X-c)_+$ for every real $c$. For $X$ with density $r$
-the difference $\E(1-2X-c)_+-\E(X-c)_+$ vanishes for $c\le-1$ and for
-$c\ge1$. It equals $(c+1)^2(3c^2-2c+7)/48$ for $-1\le c\le0$ and
-$(1-c)^2(7+26c-21c^2)/48$ for $0\le c\le1$, and both quadratic factors are
+$\mu=1/3$ it reads $\E(X-s)_+\le\E(1-2X-s)_+$ for every real $s$. For $X$ with density $r$
+the difference $\E(1-2X-s)_+-\E(X-s)_+$ vanishes for $s\le-1$ and for
+$s\ge1$. It equals $(s+1)^2(3s^2-2s+7)/48$ for $-1\le s\le0$ and
+$(1-s)^2(7+26s-21s^2)/48$ for $0\le s\le1$, and both quadratic factors are
 positive on these intervals. So $r$ satisfies all of Wang's norm
 inequalities for $n=3$ and is not $3$-CM, and~\eqref{eq:nec2} does not
-follow from these inequalities. Other laws that satisfy them and are not
+follow from these inequalities. Other distributions that satisfy them and are not
 completely mixable are given in~\cite[Theorem~1.4]{Shm26}; there complete
 mixability is excluded by~\cite[Lemma~5.1 and Proposition~5.4]{Shm26}
 rather than by an endpoint condition. Question~(1) of~\cite[Section~6]{Shm26} asks whether domination of $X$ by
