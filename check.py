@@ -38,11 +38,11 @@ out.append(('decomposition residual', sp.expand(sp.Rational(3, 4) * v * A + 6 * 
 out.append(('weights sum minus 1', sp.expand(sp.Rational(3, 4) * v + 6 * w + u / 4 - 1)))
 
 # The quartic counterexample.
-h = x / 101 * (2360 - 8070 * x + 9360 * x**2 - 3645 * x**3)
-out.append(('h: mass, mean', *mass_mean(h)))
-out.append(('h derivative', sp.factor(sp.diff(h, x))))
-out.append(('h(0), h(1)', h.subs(x, 0), h.subs(x, 1)))
-p = sp.Rational(99, 100) * h + sp.Rational(1, 100) * 2 * (1 - x)
+p0 = x / 101 * (2360 - 8070 * x + 9360 * x**2 - 3645 * x**3)
+out.append(('p0: mass, mean', *mass_mean(p0)))
+out.append(('p0 derivative', sp.factor(sp.diff(p0, x))))
+out.append(('p0(0), p0(1)', p0.subs(x, 0), p0.subs(x, 1)))
+p = sp.Rational(99, 100) * p0 + sp.Rational(1, 100) * 2 * (1 - x)
 out.append(('p: mass, mean', *mass_mean(p)))
 out.append(('p(0), p(1), p\'(0), p\'(2/9)', p.subs(x, 0), p.subs(x, 1),
             sp.diff(p, x).subs(x, 0), sp.diff(p, x).subs(x, sp.Rational(2, 9))))

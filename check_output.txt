@@ -6,9 +6,9 @@ q: total mass | 1
 q: x-marginal minus H | 0
 decomposition residual | 0
 weights sum minus 1 | 0
-h: mass, mean | 1 | 1/3
-h derivative | -20*(9*x - 2)*(81*x**2 - 138*x + 59)/101
-h(0), h(1) | 0 | 5/101
+p0: mass, mean | 1 | 1/3
+p0 derivative | -20*(9*x - 2)*(81*x**2 - 138*x + 59)/101
+p0(0), p0(1) | 0 | 5/101
 p: mass, mean | 1 | 1/3
 p(0), p(1), p'(0), p'(2/9) | 1/50 | 99/2020 | 116719/5050 | -1/50
 real roots of p' in [0,1] | [CRootOf(721710*x**3 - 1389960*x**2 + 798930*x - 116719, 0)]
