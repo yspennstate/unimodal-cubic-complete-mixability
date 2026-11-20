@@ -71,5 +71,16 @@ out.append(('r: 2E(t-X)_+ - E(X-(1-2t))_+', wang,
 # Endpoint identity: g(0) - 4 g(1) in terms of u, v, w.
 out.append(('g(0) - 4g(1) - (u/3 + 4v/3 + 7w)', sp.expand(f.subs(x, 0) - 4 * w - (u / 3 + 4 * v / 3 + 7 * w))))
 
+# Section 6: for a density of degree <= 3 with mass 1 and mean mu, u/4 + 3v/4 + 6w = 30 mu - 9.
+mu, a, b = sp.symbols('mu a b')
+g = a + b * x + C * x**2 + D * x**3
+sol = sp.solve([sp.integrate(g, (x, 0, 1)) - 1, sp.integrate(x * g, (x, 0, 1)) - mu], [a, b], dict=True)[0]
+g = g.subs(sol)
+ug, vg, wg = sp.diff(g, x).subs(x, 0), -sp.diff(g, x).subs(x, 1), g.subs(x, 1)
+out.append(('u/4 + 3v/4 + 6w - (30 mu - 9), mean mu', sp.expand(ug / 4 + sp.Rational(3, 4) * vg + 6 * wg - (30 * mu - 9))))
+e = 2 - 6 * x**2 + 4 * x**3
+out.append(('2 - 6x^2 + 4x^3: mass, mean, u, v, w', *mass_mean(e), sp.diff(e, x).subs(x, 0),
+            -sp.diff(e, x).subs(x, 1), e.subs(x, 1)))
+
 for row in out:
     print(' | '.join(str(c) for c in row))
