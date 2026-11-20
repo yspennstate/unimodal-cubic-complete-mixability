@@ -82,5 +82,34 @@ e = 2 - 6 * x**2 + 4 * x**3
 out.append(('2 - 6x^2 + 4x^3: mass, mean, u, v, w', *mass_mean(e), sp.diff(e, x).subs(x, 0),
             -sp.diff(e, x).subs(x, 1), e.subs(x, 1)))
 
+# Remark 3.2: H = c K + (1-c) D with K concave on [0,b], D nonincreasing on [0,1], both with mean 1/3.
+s = sp.symbols('s')
+Hx = sp.Rational(4, 3) * (1 - x)**2 * (1 + 5 * x)
+Hpx = sp.diff(Hx, x)
+xs = sp.Rational(6, 5) - s
+slope = -Hpx.subs(x, s)
+k1 = Hx - Hx.subs(x, xs) + slope * (s - xs)          # kappa on [0, 6/5 - s]
+k2 = slope * (s - x)                                  # kappa on [6/5 - s, s]
+lo, hi = sp.Rational(9, 10), sp.Rational(19, 20)
+out.append(("mixture: H'(6/5-s) - H'(s)", sp.expand(Hpx.subs(x, xs) - Hpx.subs(x, s))))
+out.append(("mixture: H'(x) - H'(s)", sp.factor(Hpx - Hpx.subs(x, s))))
+out.append(("mixture: H''", sp.factor(sp.diff(Hx, x, 2))))
+out.append(('mixture: kappa continuous and C^1 at 6/5-s',
+            sp.expand((k1 - k2).subs(x, xs)), sp.expand(sp.diff(k1 - k2, x).subs(x, xs))))
+m0 = sp.expand(sp.integrate(k1, (x, 0, xs)) + sp.integrate(k2, (x, xs, s)))
+m1 = sp.expand(sp.integrate(x * k1, (x, 0, xs)) + sp.integrate(x * k2, (x, xs, s)))
+phi = sp.factor(m1 - m0 / 3)
+Q = sp.Poly(4375 * s**4 - 11000 * s**3 + 9425 * s**2 - 3240 * s + 432, s)
+out.append(('mixture: int x kappa - (1/3) int kappa', phi,
+            'equals -2(5s-1)Q/9375:', sp.expand(phi + 2 * (5 * s - 1) * Q.as_expr() / 9375) == 0))
+out.append(('mixture: Q(9/10), Q(19/20), roots of Q in [9/10,19/20]', Q.eval(lo), Q.eval(hi), Q.count_roots(lo, hi)))
+k0 = sp.Poly(sp.expand(k1.subs(x, 0)), s)
+out.append(('mixture: kappa(0) at 9/10, roots in [9/10,19/20]', k0.eval(lo), k0.count_roots(lo, hi)))
+M0 = sp.Poly(m0, s)
+out.append(('mixture: int kappa at 9/10 and 19/20, roots of int kappa and of int kappa - 1 in [9/10,19/20]',
+            M0.eval(lo), M0.eval(hi), M0.count_roots(lo, hi), sp.Poly(m0 - 1, s).count_roots(lo, hi)))
+sstar = [z for z in sp.real_roots(Q) if lo < z < hi][0]
+out.append(('mixture: s* (float), int kappa at s*', sp.N(sstar, 12), sp.N(M0.eval(sstar), 12)))
+
 for row in out:
     print(' | '.join(str(c) for c in row))

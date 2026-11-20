@@ -20,3 +20,12 @@ r: 2E(t-X)_+ - E(X-(1-2t))_+ | -t**2*(21*t**2 - 8*t - 3)/3 | real roots in (0,1/
 g(0) - 4g(1) - (u/3 + 4v/3 + 7w) | 0
 u/4 + 3v/4 + 6w - (30 mu - 9), mean mu | 0
 2 - 6x^2 + 4x^3: mass, mean, u, v, w | 1 | 3/10 | 0 | 0 | 0
+mixture: H'(6/5-s) - H'(s) | 0
+mixture: H'(x) - H'(s) | 4*(-s + x)*(5*s + 5*x - 6)
+mixture: H'' | 8*(5*x - 3)
+mixture: kappa continuous and C^1 at 6/5-s | 0 | 0
+mixture: int x kappa - (1/3) int kappa | -2*(5*s - 1)*(4375*s**4 - 11000*s**3 + 9425*s**2 - 3240*s + 432)/9375 | equals -2(5s-1)Q/9375: | True
+mixture: Q(9/10), Q(19/20), roots of Q in [9/10,19/20] | 27/16 | -1945/256 | 1
+mixture: kappa(0) at 9/10, roots in [9/10,19/20] | 27/50 | 0
+mixture: int kappa at 9/10 and 19/20, roots of int kappa and of int kappa - 1 in [9/10,19/20] | 999/2000 | 1891/6400 | 0 | 0
+mixture: s* (float), int kappa at s* | 0.907021581085 | 0.477063269312

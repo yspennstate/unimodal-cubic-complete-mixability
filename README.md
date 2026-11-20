@@ -12,5 +12,6 @@ The paper source and PDF are in `paper/`.
 - the marginal of the coupling with density 8(xy+xz+yz) on the triangle;
 - the decomposition g = (3v/4)A + 6wB + (u/4)H and the identity g(0) - 4g(1) = u/3 + 4v/3 + 7w;
 - every value used for the quartic examples p0 and p and the quadratic r.
+- the facts behind the mixture H = cK + (1-c)D (Proposition 3.2): the root of Q in (9/10, 19/20), the sign of kappa(0), and the range of the integral of kappa.
 
 The output of `python check.py` is in `check_output.txt`. It runs in a few seconds.
