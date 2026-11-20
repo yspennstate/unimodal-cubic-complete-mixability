@@ -457,9 +457,9 @@ p_0(x)=\frac x{101}\bigl(2360-8070x+9360x^2-3645x^3\bigr).
 \end{equation}
 Then $\int_0^1p_0=1$, $\int_0^1xp_0(x)\,dx=1/3$, and
 \begin{equation}\label{eq:hprime}
-p_0'(x)=-\frac{20}{101}(9x-2)R(x),\qquad R(x)=81x^2-138x+59.
+p_0'(x)=-\frac{20}{101}(9x-2)\rho(x),\qquad \rho(x)=81x^2-138x+59.
 \end{equation}
-Since $R(x)=81\bigl(x-\tfrac{23}{27}\bigr)^2+\tfrac29>0$, the polynomial $p_0$
+Since $\rho(x)=81\bigl(x-\tfrac{23}{27}\bigr)^2+\tfrac29>0$, the polynomial $p_0$
 increases on $[0,2/9]$ and decreases on $[2/9,1]$. With $p_0(0)=0$ and
 $p_0(1)=5/101$, this shows that $p_0$ is nonnegative on $[0,1]$, so it is a
 unimodal probability density with mean $1/3$. It violates $f(0)\ge2f(1)$,
@@ -475,9 +475,9 @@ p(x)=\frac{99}{100}p_0(x)+\frac1{100}\cdot2(1-x).
 \begin{proof}[Proof of Theorem~\ref{thm:sharp}]
 The polynomial $p$ has degree four, integral $1$ and mean $1/3$. On
 $[2/9,1]$ both $p_0$ and $2(1-x)$ are decreasing, so $p'<0$ there. On
-$[0,2/9]$ we have $P>0$ and $R'(x)=162x-138<0$, so
+$[0,2/9]$ we have $\rho>0$ and $\rho'(x)=162x-138<0$, so
 \[
-p_0''(x)=-\frac{20}{101}\bigl(9R(x)+(9x-2)R'(x)\bigr)<0,
+p_0''(x)=-\frac{20}{101}\bigl(9\rho(x)+(9x-2)\rho'(x)\bigr)<0,
 \]
 and $p'$ is strictly decreasing on $[0,2/9]$. As $p'(0)=116719/5050>0$
 and $p'(2/9)=-1/50<0$, the polynomial $p$ has exactly one critical point
