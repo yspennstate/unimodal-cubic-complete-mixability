@@ -1,0 +1,20 @@
+general cubic: mass, mean | 1 | 1/3
+A: mass, mean, derivative | 1 | 1/3 | 4*x*(5*x - 6)/3
+B: mass, mean, derivative | 1 | 1/3 | 10*x*(x - 1)
+H: mass, mean, derivative | 1 | 1/3 | 4*(x - 1)*(5*x - 1)
+q: total mass | 1
+q: x-marginal minus H | 0
+decomposition residual | 0
+weights sum minus 1 | 0
+h: mass, mean | 1 | 1/3
+h derivative | -20*(9*x - 2)*(81*x**2 - 138*x + 59)/101
+h(0), h(1) | 0 | 5/101
+p: mass, mean | 1 | 1/3
+p(0), p(1), p'(0), p'(2/9) | 1/50 | 99/2020 | 116719/5050 | -1/50
+real roots of p' in [0,1] | [CRootOf(721710*x**3 - 1389960*x**2 + 798930*x - 116719, 0)]
+min of p on [0,1] (critical points and ends) | 1/50
+p: F(t) - 2(1-F(1-t)) at t=1/200 | -556171273829/3232000000000000
+r: mass, mean | 1 | 1/3
+r: E(t-X)_+ - E(X-(1-2t))_+ | -t**2*(3*t - 1)*(5*t - 1)/2
+r: 2E(t-X)_+ - E(X-(1-2t))_+ | -t**2*(21*t**2 - 8*t - 3)/3 | real roots in (0,1/4): | []
+g(0) - 4g(1) - (u/3 + 4v/3 + 7w) | 0

@@ -1,0 +1,455 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+
+\hypersetup{pdftitle={Complete mixability of unimodal cubic densities at the boundary mean},pdfauthor={Yitzchak Shmalo}}
+
+\begin{document}
+
+\title[Unimodal cubic densities at the boundary mean]{Complete mixability of unimodal cubic densities at the boundary mean}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{}
+\subjclass[2020]{60E05, 60E15, 91G70}
+\keywords{complete mixability, unimodal density, polynomial density, mean condition, dependence}
+
+\begin{abstract}
+A distribution is $3$-completely mixable if it is the common law of three
+random variables whose sum is constant. For a distribution on $[0,1]$ with
+mean $1/3$ the constant must be $1$, and the mean lies at the end of the
+interval $[1/3,2/3]$ allowed by the mean condition. We show that every
+unimodal probability density on $[0,1]$ that is a polynomial of degree at
+most three and has mean $1/3$ is $3$-completely mixable. Each such density is
+either decreasing, and covered by the theorem of Wang and Wang on monotone
+densities, or a convex combination of three explicit $3$-completely
+mixable densities. The degree bound cannot be raised: we give a unimodal
+polynomial density of degree four, strictly positive on $[0,1]$, with mean
+$1/3$, which is not $3$-completely mixable. A quadratic example shows that
+unimodality cannot be dropped. The obstructions are two elementary
+necessary conditions at the endpoints of the support.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+A distribution $F$ on $\mathbb{R}$ is \emph{$n$-completely mixable} ($n$-CM)
+if there are random variables $X_1,\dots,X_n$, each with law $F$, such that
+$X_1+\dots+X_n$ is almost surely constant. The notion was introduced by
+Wang and Wang~\cite{WW11}. It is the condition under which the sum of $n$
+random variables with given marginals can be made constant, and it enters
+the bounds on the distribution of a sum of dependent risks with fixed
+marginals; see the survey of Wang~\cite{Wan15} for the background and
+applications.
+
+If $F$ is $n$-CM and has mean $\mu$, the constant sum is $n\mu$. If $F$ is
+supported on $[a,b]$, with $a$ and $b$ the ends of its essential support,
+then the \emph{mean condition}
+\begin{equation}\label{eq:meancond}
+a+\frac{b-a}{n}\le\mu\le b-\frac{b-a}{n}
+\end{equation}
+is necessary for $F$ to be $n$-CM~\cite[Proposition~2.1(7)]{WW11}. Wang and
+Wang~\cite[Theorem~2.4 and Corollary~2.9]{WW11} proved that it is also
+sufficient when $F$ has a monotone density on $[a,b]$. R\"uschendorf and
+Uckelmann showed that a symmetric unimodal density is $n$-CM for $n\ge2$.
+Puccetti, Wang and Wang showed the same for a concave density when
+$n\ge3$~\cite[Theorem~4.2]{PWW12}, and in a later paper for a density
+bounded below by $3/(n(b-a))$ on $[a,b]$, again with $n\ge3$. See the lists
+in~\cite[Section~2.2]{Wan15} and~\cite[Propositions~1.1--1.4]{PW15}.
+Puccetti, Wang and Wang~\cite[Section~6]{PWW12} suggested that their methods
+might yield the complete mixability of unimodal asymmetric distributions.
+For general unimodal densities the mean condition is not sufficient.
+Puccetti and Wang~\cite{PW15} gave numerical evidence for this, with
+truncated lognormal laws and $n=3$. Open Problem~10 of~\cite{Wan15} asks:
+\begin{quote}
+Under what extra conditions a unimodal distribution on a bounded interval
+is $n$-CM?
+\end{quote}
+The survey adds that the question is of particular interest when one of the
+inequalities in~\eqref{eq:meancond} is an equality.
+
+The two theorems below settle a special case: $n=3$, the boundary mean
+$\mu=a+(b-a)/3$, and densities that are polynomials of low degree. By the
+affine invariance of complete mixability~\cite[Proposition~2.1(1)]{WW11} we
+may take $[a,b]=[0,1]$, so that $\mu=1/3$ and the constant sum is $1$. We
+call a density $f$ on $[0,1]$ \emph{unimodal} if there is $m\in[0,1]$ such
+that $f$ is nondecreasing on $[0,m]$ and nonincreasing on $[m,1]$; the mode
+$m$ may be an endpoint.
+
+\begin{theorem}\label{thm:main}
+Let $f$ be a probability density on $[0,1]$ that is a polynomial of degree
+at most three, is unimodal, and has mean $1/3$. Then $f$ is $3$-CM.
+\end{theorem}
+
+\begin{theorem}\label{thm:sharp}
+There is a probability density $p$ on $[0,1]$ that is a polynomial of degree
+four, is strictly positive on $[0,1]$, has exactly one local maximum in
+$[0,1]$, which lies in its interior, and has mean $1/3$, but is not $3$-CM.
+\end{theorem}
+
+The density in Theorem~\ref{thm:sharp} is given in~\eqref{eq:p}. By
+reflection $x\mapsto1-x$, both theorems hold at the other boundary mean
+$2/3$, and by affine maps at the boundary means of any interval $[a,b]$.
+
+The proof of Theorem~\ref{thm:main} rests on two known facts and one
+identity. The facts are the theorem of Wang and Wang on monotone densities
+and the convexity of the set of $n$-CM laws with a given mean, also due to
+them~\cite[Proposition~2.1(3)]{WW11}. The identity of
+Proposition~\ref{prop:decomp} writes every cubic density of mean $1/3$
+whose derivative is nonnegative at $0$ and nonpositive at $1$ as a convex
+combination of two decreasing densities $A$ and $B$ and the density
+\[
+H(x)=\tfrac43(1-x)^2(1+5x).
+\]
+The density $H$ is neither monotone, nor symmetric, nor concave, and it
+vanishes at $x=1$, so it is not in any of the classes listed above. It is
+$3$-CM by an explicit coupling (Lemma~\ref{lem:H}), the law of a uniformly
+permuted Dirichlet$(2,2,1)$ vector.
+
+The obstructions behind Theorem~\ref{thm:sharp} are two necessary
+conditions at the endpoints, proved in Lemma~\ref{lem:necessary}. For a
+$3$-CM density on $[0,1]$ with mean $1/3$ that is continuous at the
+endpoints, they give $f(0)\ge2f(1)$ and the stronger $f(0)\ge4f(1)$. The
+first also follows from the norm condition of
+Wang~\cite[Theorem~5]{Wan15}, and~\eqref{eq:nec2} sharpens that condition in
+the present case by a factor of two (see the remark after
+Lemma~\ref{lem:necessary}). The quartic of Theorem~\ref{thm:sharp} violates
+both endpoint conditions. The quadratic density $r(x)=3-8x+6x^2$ satisfies
+the first and violates the second. So the unimodality assumption in
+Theorem~\ref{thm:main} cannot be dropped; see Section~\ref{sec:examples}.
+
+\section{Two known results}
+
+\begin{lemma}[{\cite[Theorem~2.4]{WW11}}]\label{lem:monotone}
+If $f$ is a decreasing probability density on $[0,1]$ with mean at least
+$1/n$, then $f$ is $n$-CM.
+\end{lemma}
+
+\begin{lemma}[{\cite[Proposition~2.1(3)]{WW11}}]\label{lem:convex}
+If $F$ and $G$ are $n$-CM, both with center $\mu$, then $\lambda
+F+(1-\lambda)G$ is $n$-CM with center $\mu$ for every $\lambda\in[0,1]$.
+\end{lemma}
+
+The center of an $n$-CM law with finite mean is its
+mean~\cite[Proposition~2.1(2)]{WW11}. One proof of Lemma~\ref{lem:convex}
+is to choose between the two couplings by an independent coin; the sum is
+$n\mu$ in both cases. By induction the lemma extends to finite convex
+combinations.
+
+\section{Proof of Theorem~\ref{thm:main}}
+
+Every polynomial $g$ of degree at most three with $\int_0^1g=1$ and
+$\int_0^1xg(x)\,dx=1/3$ can be written, with two free real parameters $c$
+and $d$, as
+\begin{equation}\label{eq:general}
+g(x)=2+\frac c6+\frac d5-\Bigl(2+c+\frac{9d}{10}\Bigr)x+cx^2+dx^3.
+\end{equation}
+Set
+\begin{equation}\label{eq:uvw}
+u=g'(0)=-2-c-\frac{9d}{10},\qquad v=-g'(1)=2-c-\frac{21d}{10},\qquad
+w=g(1)=\frac c6+\frac{3d}{10}.
+\end{equation}
+Consider the three polynomials
+\[
+A(x)=\frac{16}9-4x^2+\frac{20}9x^3,\qquad
+B(x)=\frac{11}6-5x^2+\frac{10}3x^3,\qquad
+H(x)=\frac43(1-x)^2(1+5x).
+\]
+Each has integral $1$ and mean $1/3$. Their derivatives are
+\[
+A'(x)=-\tfrac43x(6-5x),\qquad B'(x)=-10x(1-x),\qquad
+H'(x)=4(1-x)(1-5x).
+\]
+So $A$ and $B$ are decreasing on $[0,1]$, with $A(1)=0$ and $B(1)=1/6$;
+in particular they are nonnegative. The polynomial $H$ is nonnegative on
+$[0,1]$, increases on $[0,1/5]$ and decreases on $[1/5,1]$.
+
+\begin{lemma}\label{lem:H}
+The density $H$ is $3$-CM.
+\end{lemma}
+
+\begin{proof}
+Let $T=\{(x,y):x,y\ge0,\ x+y\le1\}$, write $z=1-x-y$, and let $(X,Y)$ have
+density
+\[
+q(x,y)=8(xy+xz+yz)
+\]
+on $T$. This function is nonnegative on $T$ and has integral $1$. It is a
+symmetric function of the three barycentric coordinates $x,y,z$. Hence
+$X$, $Y$ and $Z=1-X-Y$ have the same law. For $0\le x\le1$,
+\[
+\int_0^{1-x}q(x,y)\,dy=8x(1-x)^2+\frac43(1-x)^3=H(x),
+\]
+so this common law has density $H$. Since $X+Y+Z=1$, $H$ is $3$-CM.
+\end{proof}
+
+The density $q$ is $\tfrac13$ times the sum of the three Dirichlet$(2,2,1)$
+densities obtained by permuting the parameters, so $(X,Y,Z)$ is a
+Dirichlet$(2,2,1)$ vector with its coordinates put in uniformly random
+order.
+
+\begin{proposition}\label{prop:decomp}
+For $g$ as in~\eqref{eq:general} and $u,v,w$ as in~\eqref{eq:uvw},
+\begin{equation}\label{eq:decomp}
+g=\frac{3v}4A+6wB+\frac u4H,\qquad\frac{3v}4+6w+\frac u4=1.
+\end{equation}
+If $u$, $v$ and $w$ are nonnegative, then $g$ is a probability density and
+is $3$-CM.
+\end{proposition}
+
+\begin{proof}
+Both identities in~\eqref{eq:decomp} follow by comparing coefficients
+of~\eqref{eq:general}. If $u,v,w\ge0$, then~\eqref{eq:decomp} writes $g$ as
+a convex combination of $A$, $B$ and $H$, which are $3$-CM with center
+$1/3$ by Lemmas~\ref{lem:monotone} and~\ref{lem:H}. Lemma~\ref{lem:convex}
+completes the proof.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Let $f$ be as in the theorem, with mode $m$. If $f$ is constant, its mean
+is $1/2$; so $f$ is not constant, and being a polynomial it is strictly
+monotone on each of $[0,m]$ and $[m,1]$ that has positive length.
+
+Suppose $m=1$, so that $f$ is nondecreasing on $[0,1]$. Then $f(x)\ge
+f(1-x)$ for $x\ge1/2$, and
+\[
+\int_0^1\Bigl(x-\frac12\Bigr)f(x)\,dx
+=\int_{1/2}^1\Bigl(x-\frac12\Bigr)\bigl(f(x)-f(1-x)\bigr)\,dx\ge0,
+\]
+so the mean is at least $1/2$, a contradiction.
+
+If $m=0$, then $f$ is decreasing on $[0,1]$ with mean $1/3$, and it is
+$3$-CM by Lemma~\ref{lem:monotone}.
+
+If $0<m<1$, take $g=f$ in~\eqref{eq:uvw}. Since $f$ is nondecreasing near
+$0$ and nonincreasing near $1$, we have $u=f'(0)\ge0$ and $v=-f'(1)\ge0$.
+Also $w=f(1)\ge0$ because $f$ is a density. Proposition~\ref{prop:decomp}
+shows that $f$ is $3$-CM.
+\end{proof}
+
+\begin{remark}
+The densities of Proposition~\ref{prop:decomp} are themselves unimodal.
+Indeed, if such a $g$ were not unimodal, there would be points $a<b$ in
+$[0,1]$ with $g'(a)<0<g'(b)$; otherwise $g$ is nondecreasing up to the
+infimum of the points where $g'<0$ and nonincreasing after it. Since
+$g'(0)\ge0\ge g'(1)$, the polynomial $g'$ would vanish in $[0,a)$, in
+$(a,b)$ and in $(b,1]$. It has degree at most two, so $g'=0$ and $g$ would
+be constant, with mean $1/2$. Together with the proof above, this
+shows that a cubic density with mean $1/3$ is unimodal exactly when it is
+decreasing or satisfies $u,v,w\ge0$. The cubic densities with mean $1/3$
+that are not unimodal have $u<0$ or $v<0$; Section~\ref{sec:examples} shows that
+some of them are not $3$-CM.
+\end{remark}
+
+\section{Two necessary conditions}
+
+\begin{lemma}\label{lem:necessary}
+Let $X_1,X_2,X_3$ be random variables with values in $[0,1]$, each with
+distribution function $F$, such that $X_1+X_2+X_3=1$ almost surely. Let $X$
+have distribution $F$.
+\begin{enumerate}
+\item For $0<t<1/2$,
+\begin{equation}\label{eq:nec1}
+\PP(X<t)\ge2\,\PP(X>1-t).
+\end{equation}
+\item For $0<t<1/4$,
+\begin{equation}\label{eq:nec2}
+\E(t-X)_+\ge\E\bigl(X-(1-2t)\bigr)_+.
+\end{equation}
+\end{enumerate}
+If $F$ has a density $f$ that is continuous at $0$ and at $1$, then
+$f(0)\ge2f(1)$ and $f(0)\ge4f(1)$.
+\end{lemma}
+
+\begin{proof}
+(1) Since $t<1/2$, at most one of the $X_i$ exceeds $1-t$. If $X_i>1-t$,
+the other two sum to $1-X_i<t$, so both are less than $t$. Hence
+\[
+\sum_{j=1}^3\mathbf 1\{X_j<t\}\ge2\sum_{i=1}^3\mathbf 1\{X_i>1-t\}
+\]
+pointwise. Taking expectations gives $3\PP(X<t)\ge6\PP(X>1-t)$.
+
+(2) Since $t<1/4$, at most one of the $X_i$ exceeds $1-2t$. If none does,
+the right-hand side of
+\[
+\sum_{j=1}^3(t-X_j)_+\ge\sum_{i=1}^3\bigl(X_i-(1-2t)\bigr)_+
+\]
+is $0$. If $X_i>1-2t$ and $j,k$ are the other two indices, then
+\[
+(t-X_j)_++(t-X_k)_+\ge2t-X_j-X_k=2t-1+X_i=X_i-(1-2t).
+\]
+So the displayed inequality holds pointwise, and taking expectations
+gives~\eqref{eq:nec2}.
+
+If $f$ is continuous at the endpoints, then as $t\downarrow0$,
+\[
+\PP(X<t)=f(0)t+o(t),\qquad\PP(X>1-t)=f(1)t+o(t),
+\]
+\[
+\E(t-X)_+=\int_0^t(t-x)f(x)\,dx=f(0)\frac{t^2}2+o(t^2),
+\]
+\[
+\E\bigl(X-(1-2t)\bigr)_+=\int_{1-2t}^1\bigl(x-(1-2t)\bigr)f(x)\,dx
+=f(1)\frac{(2t)^2}2+o(t^2).
+\]
+Dividing~\eqref{eq:nec1} by $t$ and~\eqref{eq:nec2} by $t^2/2$ and letting
+$t\downarrow0$ gives $f(0)\ge2f(1)$ and $f(0)\ge4f(1)$.
+\end{proof}
+
+Both conditions use only that the three coordinates have the same law and
+sum to $1$; no exchangeability is needed. Since $f(0)\ge4f(1)$ implies
+$f(0)\ge2f(1)$ when $f(1)\ge0$, the second endpoint condition is the
+stronger one.
+
+Wang~\cite[Theorem~5]{Wan15} proved that if $F$ is $n$-CM with center $\mu$
+and $X\sim F$, then $\|(X-s)_+\|\le(n-1)\|(X-s')_-\|$ for every
+law-determined norm $\|\cdot\|$, every $s\in\mathbb{R}$ and
+$s'=(n\mu-s)/(n-1)$. Take the $L^1$ norm, $n=3$, $\mu=1/3$ and $s=1-2t$, so
+that $s'=t$. This gives
+\begin{equation}\label{eq:wang}
+\E\bigl(X-(1-2t)\bigr)_+\le2\,\E(t-X)_+,
+\end{equation}
+and, as in the proof above, $f(0)\ge2f(1)$. Inequality~\eqref{eq:nec2}
+removes the factor $2$ in this case, and the example $r$ of
+Section~\ref{sec:examples} satisfies~\eqref{eq:wang} for every
+$t\in(0,1/4)$ but not~\eqref{eq:nec2}.
+
+\section{Examples}\label{sec:examples}
+
+Both examples below have mean $1/3$ and fail one of the endpoint
+conditions of Lemma~\ref{lem:necessary}. The first is unimodal of degree
+four; the second is quadratic and not unimodal.
+
+\subsection{A quartic that is not \texorpdfstring{$3$}{3}-CM}
+
+Let
+\begin{equation}\label{eq:h}
+h(x)=\frac x{101}\bigl(2360-8070x+9360x^2-3645x^3\bigr).
+\end{equation}
+Then $\int_0^1h=1$, $\int_0^1xh(x)\,dx=1/3$, and
+\begin{equation}\label{eq:hprime}
+h'(x)=-\frac{20}{101}(9x-2)P(x),\qquad P(x)=81x^2-138x+59.
+\end{equation}
+Since $P(x)=81\bigl(x-\tfrac{23}{27}\bigr)^2+\tfrac29>0$, the polynomial $h$
+increases on $[0,2/9]$ and decreases on $[2/9,1]$. With $h(0)=0$ and
+$h(1)=5/101$, this shows that $h$ is nonnegative on $[0,1]$, so it is a
+unimodal probability density with mean $1/3$. It violates $f(0)\ge2f(1)$,
+so it is not $3$-CM by Lemma~\ref{lem:necessary}.
+
+To obtain a strictly positive example, mix in a small amount of the
+decreasing density $2(1-x)$, which has mean $1/3$:
+\begin{equation}\label{eq:p}
+p(x)=\frac{99}{100}h(x)+\frac1{100}\cdot2(1-x).
+\end{equation}
+
+\begin{proof}[Proof of Theorem~\ref{thm:sharp}]
+The polynomial $p$ has degree four, integral $1$ and mean $1/3$. On
+$[2/9,1]$ both $h$ and $2(1-x)$ are decreasing, so $p'<0$ there. On
+$[0,2/9]$ we have $P>0$ and $P'(x)=162x-138<0$, so
+\[
+h''(x)=-\frac{20}{101}\bigl(9P(x)+(9x-2)P'(x)\bigr)<0,
+\]
+and $p'$ is strictly decreasing on $[0,2/9]$. As $p'(0)=116719/5050>0$
+and $p'(2/9)=-1/50<0$, the polynomial $p$ has exactly one critical point
+in $[0,1]$, a maximum in $(0,2/9)$, and it is unimodal. Its minimum over
+$[0,1]$ is therefore attained at an endpoint, and
+\[
+p(0)=\frac1{50},\qquad p(1)=\frac{99}{2020},
+\]
+so $p>0$ on $[0,1]$. Finally $2p(1)=99/1010>1/50=p(0)$, so $p$ violates
+$f(0)\ge2f(1)$ and is not $3$-CM by Lemma~\ref{lem:necessary}.
+\end{proof}
+
+The violation is visible at a fixed $t$: for $t=1/200$, the difference
+$\PP(X<t)-2\PP(X>1-t)$ under $p$ equals
+$-556171273829/3232000000000000<0$.
+
+\subsection{Unimodality cannot be dropped}
+
+The polynomial
+\[
+r(x)=3-8x+6x^2=6\Bigl(x-\frac23\Bigr)^2+\frac13
+\]
+is a strictly positive density on $[0,1]$ with integral $1$ and mean
+$1/3$. It decreases on $[0,2/3]$ and increases on $[2/3,1]$, so it is not
+unimodal. It satisfies $r(0)=3\ge2r(1)=2$, but $r(0)=3<4r(1)=4$, so it is
+not $3$-CM by Lemma~\ref{lem:necessary}. For $0<t<1/4$ the two sides
+of~\eqref{eq:nec2} differ by
+\[
+\E(t-X)_+-\E\bigl(X-(1-2t)\bigr)_+=-\frac{t^2(3t-1)(5t-1)}2,
+\]
+which is negative for $0<t<1/5$. For $r$ we have $u=r'(0)=-8<0$, so
+Proposition~\ref{prop:decomp} does not apply, as it must not.
+
+\section{Remarks}
+
+Theorem~\ref{thm:main} is a statement about $n=3$ only. At the boundary
+mean $1/n$ the decomposition into decreasing densities and a symmetric
+simplex coupling may extend to other $n$ and other degrees; these cases
+are open. The theorem also says
+nothing about cubic densities whose mean lies strictly inside
+$[1/3,2/3]$.
+
+Theorem~\ref{thm:sharp} and Lemma~\ref{lem:necessary} show that, at the
+boundary mean, the obstruction to complete mixability of a unimodal density
+can sit entirely at the endpoints: a density that is small at the left end
+compared with the right end cannot be $3$-CM, however regular it is
+elsewhere. For a cubic $g$ as in~\eqref{eq:general}, comparing coefficients
+gives
+\[
+g(0)-4g(1)=\frac u3+\frac{4v}3+7w,
+\]
+so the conditions $u,v,w\ge0$, which unimodality forces when the mode is
+interior, imply the endpoint condition $g(0)\ge4g(1)$ directly.
+
+\section*{Acknowledgments and funding}
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711) and by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning. It was also supported by Heights Labs, by Convex Nexus Capital and by the Israel Science Foundation (ISF grants 2258/19 and 4101/25).
+
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}. The method is described in~\cite{MathBrainPaper}.
+
+\section*{Declaration of competing interest}
+
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+
+This paper is part of a broader research project on proving open problems with AI systems. The work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}; the method is described in~\cite{MathBrainPaper}. The endpoint condition $f(0)\ge2f(1)$ also follows from the norm condition of Wang~\cite[Theorem~5]{Wan15}. OpenAI's Codex (GPT-6.1) proposed the decomposition of Proposition~\ref{prop:decomp}, the coupling of Lemma~\ref{lem:H}, the proofs of Lemma~\ref{lem:necessary} and the examples of Section~\ref{sec:examples}. A second Codex run audited them. Anthropic's Claude (Opus~5.5) checked every identity in exact arithmetic, read the cited results at their sources, and wrote the text. The theorem on monotone densities and the convexity used here are due to Wang and Wang~\cite{WW11}. The question is Open Problem~10 of Wang~\cite{Wan15}. The new results are Theorems~\ref{thm:main} and~\ref{thm:sharp}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data and code availability}
+
+The script \texttt{check.py} is available at \url{https://github.com/yspennstate/unimodal-cubic-complete-mixability}. It checks in exact rational arithmetic, with SymPy, the normal form~\eqref{eq:general}, the integrals and derivatives of $A$, $B$ and $H$, the marginal of the coupling in Lemma~\ref{lem:H}, the identity~\eqref{eq:decomp}, and every value used in Section~\ref{sec:examples}.
+
+\begin{thebibliography}{99}
+
+\bibitem{PW15} G.~Puccetti and R.~Wang, \emph{Detecting complete and joint mixability}, J. Comput. Appl. Math. \textbf{280} (2015), 174--187. doi:10.1016/j.cam.2014.11.050.
+
+\bibitem{PWW12} G.~Puccetti, B.~Wang and R.~Wang, \emph{Advances in complete mixability}, J. Appl. Probab. \textbf{49} (2012), 430--440. doi:10.1239/jap/1339878796.
+
+\bibitem{Wan15} R.~Wang, \emph{Current open questions in complete mixability}, Probab. Surv. \textbf{12} (2015), 13--32. doi:10.1214/14-PS250.
+
+\bibitem{WW11} B.~Wang and R.~Wang, \emph{The complete mixability and convex minimization problems with monotone marginal densities}, J. Multivariate Anal. \textbf{102} (2011), 1344--1360. doi:10.1016/j.jmva.2011.05.002.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain}, public repository, 2026, \url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, doi:10.5281/zenodo.24150837, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+
+\end{thebibliography}
+
+\end{document}
