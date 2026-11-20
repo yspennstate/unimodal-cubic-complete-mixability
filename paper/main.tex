@@ -37,8 +37,8 @@ $3$-completely mixable. Such a density is either decreasing, and then
 $3$-completely mixable by a theorem of Wang and Wang, or a mixture of
 two decreasing densities and one explicit $3$-completely mixable density with
 an interior mode. Every $3$-completely mixable density $f$ on $[0,1]$ with mean
-$1/3$ that is continuous at $0$ and $1$ satisfies $f(0)\ge4f(1)$; the norm
-condition of Wang gives $f(0)\ge2f(1)$. A unimodal quartic density, strictly
+$1/3$ that is continuous at $0$ and $1$ satisfies $f(0)\ge4f(1)$; Wang's norm
+inequalities give $f(0)\ge2f(1)$. A unimodal quartic density, strictly
 positive on $[0,1]$, violates the weaker inequality, so the degree bound
 cannot be raised. A quadratic density violates only the stronger one, so
 unimodality cannot be dropped.
@@ -155,8 +155,8 @@ theorem of Wang and Wang on monotone densities, applied to the second, and
 convexity give a second proof that $H$ is $3$-CM.
 
 Every $3$-CM density $f$ on $[0,1]$ with mean $1/3$ that is continuous at
-$0$ and $1$ satisfies $f(0)\ge2f(1)$. This follows from the norm condition
-of Wang~\cite[Theorem~5]{Wan15} (see~\eqref{eq:wang}), so Wang's theorem
+$0$ and $1$ satisfies $f(0)\ge2f(1)$. This follows from Wang's norm
+inequalities~\cite[Theorem~5]{Wan15} (see~\eqref{eq:wang}), so Wang's theorem
 already shows that a unimodal density of mean $1/3$, continuous at $0$ and
 $1$, with $f(0)<2f(1)$ is not $3$-CM. Theorem~\ref{thm:sharp} supplies such
 a density that is a polynomial of degree four and strictly positive on
@@ -164,13 +164,13 @@ $[0,1]$. Lemma~\ref{lem:necessary} proves $f(0)\ge2f(1)$ directly, together
 with $f(0)\ge4f(1)$, which improves it by a factor of two. We call these two
 inequalities the \emph{endpoint conditions}. The quadratic density
 $r(x)=3-8x+6x^2$ satisfies the first and violates the second. So the unimodality assumption in Theorem~\ref{thm:main} cannot
-be dropped; see Section~\ref{sec:examples}. In earlier work~\cite{Shm26} the
-author showed that for bounded laws the whole family of Wang's norm
-inequalities reduces to its $L^1$ case, and that it does not imply
-$n$-complete mixability for $n=3,4$, by examples excluded through a mass
-argument. The density $r$ satisfies the whole family for $n=3$
+be dropped; see Section~\ref{sec:examples}. For bounded laws the whole family of
+Wang's norm inequalities reduces to its $L^1$ case~\cite[Proposition~3.1]{Shm26},
+and it does not imply $n$-complete mixability for
+$n=3,4$~\cite[Theorem~1.4]{Shm26}; the examples there are excluded by
+\cite[Lemma~5.1 and Proposition~5.4]{Shm26}, not by an endpoint condition. The density $r$ satisfies the whole family for $n=3$
 (Section~\ref{sec:endpoint}), so the second endpoint condition is a
-necessary condition that the norm inequalities do not give.
+necessary condition that Wang's norm inequalities do not give.
 
 \section{Preliminaries}
 
@@ -431,6 +431,17 @@ exchangeable. Since $f(0)\ge4f(1)$ implies
 $f(0)\ge2f(1)$ when $f(1)\ge0$, the second endpoint condition is the
 stronger one.
 
+Komisarski and Labuschagne~\cite[Corollary~2]{KL24} prove tail
+inequalities for random variables with constant sum: if
+$X_1+\dots+X_n=t$, then $\sum_{j\ne i}\PP(X_j<a_j)\ge\PP\bigl(X_i>t-\sum_{j\ne i}a_j\bigr)$
+for all real $a_1,\dots,a_n$ and every $i$; their Remark~1 derives
+from it the bounds on the centre of a complete mix. For three variables with
+distribution $F$ and sum $1$, thresholds $a_j=a_k=\varepsilon$ give
+$2F(\varepsilon)\ge\PP(X>1-2\varepsilon)$, and letting $\varepsilon\to0$
+gives $f(0)\ge f(1)$ for a density continuous at $0$ and $1$. Thresholds
+tending to $0$ give nothing stronger at the endpoints, so neither endpoint
+condition follows from their corollary.
+
 A law-determined norm is a map from random variables to $[0,\infty]$ that
 is a norm, takes the same value on identically distributed variables and
 is monotone on nonnegative variables~\cite[Definition~5]{Wan15}.
@@ -450,7 +461,7 @@ $(X_i-(1-2t))_+\le\sum_{j\ne i}(t-X_j)_+$ over $i=1,2,3$
 gives~\eqref{eq:wang}. For $t<1/4$ at most one $X_i$ exceeds $1-2t$, so
 one index suffices, and this gives~\eqref{eq:nec2}.
 
-The example $r$ satisfies Wang's inequalities for every law-determined norm
+The example $r$ satisfies Wang's norm inequalities for every law-determined norm
 and every $s$, not only~\eqref{eq:wang}. For a bounded law it is enough to
 check $\|(X-s)_+\|\le(n-1)\|(X-s')_-\|$ for the $L^1$ norm and every real
 $s$~\cite[Proposition~3.1]{Shm26}; it then says that $X$ is dominated by
@@ -463,13 +474,13 @@ positive on these intervals. So $r$ satisfies all of Wang's norm
 inequalities for $n=3$ and is not $3$-CM, and~\eqref{eq:nec2} does not
 follow from these inequalities. Other laws that satisfy them and are not
 completely mixable are given in~\cite[Theorem~1.4]{Shm26}; there complete
-mixability is excluded by a mass argument rather than by an endpoint
-condition. Question~(1) of~\cite[Section~6]{Shm26} asks whether this convex order
-condition implies $n$-complete mixability for unimodal densities that are
+mixability is excluded by~\cite[Lemma~5.1 and Proposition~5.4]{Shm26}
+rather than by an endpoint condition. Question~(1) of~\cite[Section~6]{Shm26} asks whether domination of $X$ by
+$n\mu-(n-1)X$ in the convex order implies $n$-complete mixability for unimodal densities that are
 not symmetric. Theorem~\ref{thm:main} gives $3$-complete mixability for
 unimodal cubic densities with mean $1/3$ without assuming it. The quartic
-density of Theorem~\ref{thm:sharp} violates $f(0)\ge2f(1)$, which the
-condition implies through~\eqref{eq:wang}, so it does not answer that
+density of Theorem~\ref{thm:sharp} violates $f(0)\ge2f(1)$, which that
+domination implies through~\eqref{eq:wang}, so it does not answer that
 question.
 
 \section{Examples}\label{sec:examples}
@@ -576,7 +587,7 @@ The author holds equity in Heights Labs and in Convex Nexus Capital and has a ma
 
 \section*{Declaration of generative AI and AI-assisted technologies}
 
-This paper is part of a broader research project on proving open problems with AI systems. The work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}; the method is described in~\cite{MathBrainPaper}. OpenAI's Codex (GPT-6.1) proposed the decomposition of Proposition~\ref{prop:decomp}, the coupling of Lemma~\ref{lem:H}, the proofs of Lemma~\ref{lem:necessary} and the examples of Section~\ref{sec:examples}. A second Codex run audited them. A Claude audit run proposed the mixture of Proposition~\ref{prop:mixture}. Anthropic's Claude (Opus~5.5) checked every identity in exact arithmetic, read the cited results at their sources, and wrote the text. The theorem on monotone densities and the convexity used here are due to Wang and Wang~\cite{WW11}, and the theorem on concave densities to Puccetti, Wang and Wang~\cite{PWW12}. The question is Open Problem~10 of Wang~\cite{Wan15}. The reduction of Wang's norm inequalities to their $L^1$ case for bounded laws is from~\cite[Proposition~3.1]{Shm26}. The new results are the identity~\eqref{eq:decomp}, which reduces every unimodal cubic density with mean $1/3$ to $A$, $B$ and $H$, and the explicit coupling of Lemma~\ref{lem:H}. Also new are inequality~\eqref{eq:nec2}, the fact that $r$ satisfies all of Wang's norm inequalities for $n=3$, and the examples of Section~\ref{sec:examples}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+This paper is part of a broader research project on proving open problems with AI systems. The work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}; the method is described in~\cite{MathBrainPaper}. OpenAI's Codex (GPT-6.1) proposed the decomposition of Proposition~\ref{prop:decomp}, the coupling of Lemma~\ref{lem:H}, the proofs of Lemma~\ref{lem:necessary} and the examples of Section~\ref{sec:examples}. A second Codex run audited them. A Claude audit run proposed the mixture of Proposition~\ref{prop:mixture}. Anthropic's Claude (Opus~5.5) checked every identity in exact arithmetic, read at their sources the results used in the proofs, and wrote the text. The theorem on monotone densities and the convexity used here are due to Wang and Wang~\cite{WW11}, and the theorem on concave densities to Puccetti, Wang and Wang~\cite{PWW12}. The question is Open Problem~10 of Wang~\cite{Wan15}. The reduction of Wang's norm inequalities to their $L^1$ case for bounded laws is from~\cite[Proposition~3.1]{Shm26}. The tail inequalities of Komisarski and Labuschagne~\cite[Corollary~2]{KL24} give $f(0)\ge f(1)$. The new results are the identity~\eqref{eq:decomp}, which reduces every unimodal cubic density with mean $1/3$ to $A$, $B$ and $H$, and the explicit coupling of Lemma~\ref{lem:H}. Also new are inequality~\eqref{eq:nec2}, the fact that $r$ satisfies all of Wang's norm inequalities for $n=3$, and the examples of Section~\ref{sec:examples}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
 \section*{Data and code availability}
 
@@ -589,6 +600,8 @@ The script \texttt{check.py}, at \url{https://github.com/yspennstate/unimodal-cu
 \bibitem{GR81} N.~Gaffke and L.~R\"uschendorf, \emph{On a class of extremal problems in statistics}, Math. Operationsforsch. Statist. Ser. Optim. \textbf{12} (1981), 123--135. doi:10.1080/02331938108842712.
 
 \bibitem{KS06} M.~Knott and C.~S.~Smith, \emph{Choosing joint distributions so that the variance of the sum is small}, J. Multivariate Anal. \textbf{97} (2006), 1757--1765. doi:10.1016/j.jmva.2006.01.004.
+
+\bibitem{KL24} A.~Komisarski and J.~Labuschagne, \emph{The distributions of the mean of random vectors with fixed marginal distribution}, J. Theoret. Probab. \textbf{37} (2024), 2121--2129. doi:10.1007/s10959-023-01277-2.
 
 \bibitem{PW15} G.~Puccetti and R.~Wang, \emph{Detecting complete and joint mixability}, J. Comput. Appl. Math. \textbf{280} (2015), 174--187. doi:10.1016/j.cam.2014.11.050.
 
