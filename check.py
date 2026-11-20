@@ -70,6 +70,16 @@ out.append(('r: E(t-X)_+ - E(X-(1-2t))_+', sp.factor(gap)))
 wang = sp.factor(2 * sp.integrate((t - x) * r, (x, 0, t)) - sp.integrate((x - (1 - 2 * t)) * r, (x, 1 - 2 * t, 1)))
 out.append(('r: 2E(t-X)_+ - E(X-(1-2t))_+', wang,
             'real roots in (0,1/4):', [z for z in sp.real_roots(sp.Poly(sp.expand(wang / t**2), t)) if 0 < z < sp.Rational(1, 4)]))
+# Section 4: for X with density r, E(1-2X-c)_+ - E(X-c)_+ on [-1,0] and on [0,1] (zero outside [-1,1]).
+c = sp.symbols('c')
+D1 = sp.integrate((1 - 2 * x - c) * r, (x, 0, (1 - c) / 2)) - sp.integrate((x - c) * r, (x, 0, 1))
+D2 = sp.integrate((1 - 2 * x - c) * r, (x, 0, (1 - c) / 2)) - sp.integrate((x - c) * r, (x, c, 1))
+out.append(('r: E(1-2X-c)_+ - E(X-c)_+ for -1<=c<=0', sp.factor(D1),
+            'check', sp.expand(D1 - (c + 1)**2 * (3 * c**2 - 2 * c + 7) / 48)))
+out.append(('r: E(1-2X-c)_+ - E(X-c)_+ for 0<=c<=1', sp.factor(D2),
+            'check', sp.expand(D2 - (1 - c)**2 * (7 + 26 * c - 21 * c**2) / 48)))
+out.append(('discriminant of 3c^2-2c+7; 7+26c-21c^2 at c=0,1 (concave)',
+            sp.discriminant(3 * c**2 - 2 * c + 7, c), 7, 7 + 26 - 21))
 # Endpoint identity: g(0) - 4 g(1) in terms of u, v, w.
 out.append(('g(0) - 4g(1) - (u/3 + 4v/3 + 7w)', sp.expand(f.subs(x, 0) - 4 * w - (u / 3 + 4 * v / 3 + 7 * w))))
 
