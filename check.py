@@ -1,5 +1,7 @@
 """Exact checks for the paper on unimodal cubic densities with mean 1/3.
 
+In the checks of Proposition 3.2 the variable s is the paper's sigma and b is its beta.
+
 Run: python check.py   (needs sympy)
 """
 import sympy as sp
@@ -105,6 +107,7 @@ out.append(('mixture: int x kappa - (1/3) int kappa', phi,
 out.append(('mixture: Q(9/10), Q(19/20), roots of Q in [9/10,19/20]', Q.eval(lo), Q.eval(hi), Q.count_roots(lo, hi)))
 k0 = sp.Poly(sp.expand(k1.subs(x, 0)), s)
 out.append(('mixture: kappa(0) at 9/10, roots in [9/10,19/20]', k0.eval(lo), k0.count_roots(lo, hi)))
+out.append(('mixture: kappa(0) as a polynomial in s, its real roots', sp.factor(k0.as_expr()), [sp.N(z, 8) for z in sp.real_roots(k0)]))
 M0 = sp.Poly(m0, s)
 out.append(('mixture: int kappa at 9/10 and 19/20, roots of int kappa and of int kappa - 1 in [9/10,19/20]',
             M0.eval(lo), M0.eval(hi), M0.count_roots(lo, hi), sp.Poly(m0 - 1, s).count_roots(lo, hi)))
