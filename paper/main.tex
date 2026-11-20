@@ -33,11 +33,14 @@ random variables whose sum is constant. For a distribution on $[0,1]$ with
 mean $1/3$ the constant must be $1$, and the mean lies at the end of the
 interval $[1/3,2/3]$ allowed by the mean condition. We show that every
 unimodal probability density on $[0,1]$ that is a polynomial of degree at
-most three and has mean $1/3$ is $3$-completely mixable. The degree bound
-cannot be raised: we give a unimodal
+most three and has mean $1/3$ is $3$-completely mixable. Each such density is
+decreasing, and covered by Wang and Wang's theorem on monotone
+densities, or a convex combination of three $3$-completely
+mixable densities.
+The degree bound cannot be raised: there is a unimodal
 polynomial density of degree four, strictly positive on $[0,1]$, with mean
-$1/3$, which is not $3$-completely mixable. The quartic violates the
-inequality $f(0)\ge2f(1)$, which follows from a norm condition of Wang. A
+$1/3$, which is not $3$-completely mixable. The quartic violates
+$f(0)\ge2f(1)$, a consequence of a norm condition of Wang. A
 quadratic example satisfies it and violates the stronger inequality
 $f(0)\ge4f(1)$ proved here, so unimodality cannot be dropped.
 \end{abstract}
@@ -399,9 +402,16 @@ Proposition~\ref{prop:decomp} does not apply.
 
 \section{Remarks}
 
-Two questions remain open. Is every unimodal cubic density on $[0,1]$ with
-mean $1/n$ $n$-CM when $n\ge4$? For $n=3$, is every unimodal cubic density
-with mean in $(1/3,2/3)$ $3$-CM?
+At the boundary mean $1/n$ with $n\ge4$ the analogue of
+Theorem~\ref{thm:main} holds for a simpler reason. For a cubic density $g$
+on $[0,1]$ with mean $\mu$, define $u,v,w$ as in~\eqref{eq:uvw}; comparing
+coefficients gives $\tfrac u4+\tfrac{3v}4+6w=30\mu-9$. A unimodal cubic
+density with mode in $(0,1)$ has $u,v,w\ge0$, so its mean is at least
+$3/10>1/4$. Hence a unimodal cubic density with mean $1/n\le1/4$ has mode
+$0$ (mode $1$ forces mean at least $1/2$, as in the proof of
+Theorem~\ref{thm:main}), and it is $n$-CM by Lemma~\ref{lem:monotone}. The
+question left open by Theorem~\ref{thm:main} is the interior one: is every
+unimodal cubic density on $[0,1]$ with mean in $(1/3,2/3)$ $3$-CM?
 
 By Lemma~\ref{lem:necessary}, a $3$-CM density on $[0,1]$ with mean $1/3$
 that is continuous at the endpoints satisfies $f(0)\ge4f(1)$. For a cubic
@@ -425,7 +435,7 @@ The author holds equity in Heights Labs and in Convex Nexus Capital and has a ma
 
 \section*{Declaration of generative AI and AI-assisted technologies}
 
-This paper is part of a broader research project on proving open problems with AI systems. The work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}; the method is described in~\cite{MathBrainPaper}. The endpoint condition $f(0)\ge2f(1)$ also follows from the norm condition of Wang~\cite[Theorem~5]{Wan15}. OpenAI's Codex (GPT-6.1) proposed the decomposition of Proposition~\ref{prop:decomp}, the coupling of Lemma~\ref{lem:H}, the proofs of Lemma~\ref{lem:necessary} and the examples of Section~\ref{sec:examples}. A second Codex run audited them. Anthropic's Claude (Opus~5.5) checked every identity in exact arithmetic, read the cited results at their sources, and wrote the text. The theorem on monotone densities and the convexity used here are due to Wang and Wang~\cite{WW11}. The question is Open Problem~10 of Wang~\cite{Wan15}. The new results are Theorem~\ref{thm:main}, the example of Theorem~\ref{thm:sharp} and inequality~\eqref{eq:nec2}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+This paper is part of a broader research project on proving open problems with AI systems. The work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}; the method is described in~\cite{MathBrainPaper}. The endpoint condition $f(0)\ge2f(1)$ also follows from the norm condition of Wang~\cite[Theorem~5]{Wan15}. OpenAI's Codex (GPT-6.1) proposed the decomposition of Proposition~\ref{prop:decomp}, the coupling of Lemma~\ref{lem:H}, the proofs of Lemma~\ref{lem:necessary} and the examples of Section~\ref{sec:examples}. A second Codex run audited them. Anthropic's Claude (Opus~5.5) checked every identity in exact arithmetic, read the cited results at their sources (the result of~\cite{RU02} in the form given in~\cite[Theorem~2.2]{WW11}), and wrote the text. The theorem on monotone densities and the convexity used here are due to Wang and Wang~\cite{WW11}. The question is Open Problem~10 of Wang~\cite{Wan15}. The new results are Theorem~\ref{thm:main}, the example of Theorem~\ref{thm:sharp} and inequality~\eqref{eq:nec2}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
 \section*{Data and code availability}
 
