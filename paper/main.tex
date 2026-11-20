@@ -66,9 +66,11 @@ a+\frac{b-a}{n}\le\mu\le b-\frac{b-a}{n}
 \end{equation}
 is necessary for $F$ to be $n$-CM~\cite[Proposition~2.1(7)]{WW11}. Wang and
 Wang~\cite[Theorem~2.4 and Corollary~2.9]{WW11} proved that it is also
-sufficient when $F$ has a monotone density on $[a,b]$. R\"uschendorf and
-Uckelmann~\cite{RU02} showed that a symmetric unimodal density is $n$-CM for
-$n\ge2$; see~\cite[Theorem~2.2]{WW11} for the statement in this form.
+sufficient when $F$ has a monotone density on $[a,b]$. Symmetric unimodal
+densities were studied for $n=3$ by Knott and Smith~\cite{KS06}, and
+R\"uschendorf and Uckelmann~\cite{RU02} showed that a symmetric unimodal
+density is $n$-CM for $n\ge2$; see~\cite[Theorem~2.2]{WW11} for the statement
+in this form.
 Unimodality cannot be dropped there: Yin and Zhu~\cite[Example~2.3]{YZ17}
 show that the symmetric density proportional to $x^{2r}$ on $[-1,1]$,
 $r\ge1$, is not $3$-CM.
@@ -114,13 +116,18 @@ The density in Theorem~\ref{thm:sharp} is given in~\eqref{eq:p}. By
 reflection $x\mapsto1-x$, both theorems hold at the other boundary mean
 $2/3$, and by affine maps at the boundary means of any interval $[a,b]$.
 
-The proof of Theorem~\ref{thm:main} rests on two known facts and one
-identity. The facts are the theorem of Wang and Wang on monotone densities
-and the convexity of the set of $n$-CM distributions with a given mean,
-also due to them~\cite[Proposition~2.1(3)]{WW11}. Call a density on $[0,1]$
-that is a polynomial of degree at most three a \emph{cubic density}. If $g$
-is a cubic density with mean $1/3$ and $u=g'(0)$, $v=-g'(1)$, $w=g(1)$, then
-(Proposition~\ref{prop:decomp})
+We call a density on $[0,1]$ that is a polynomial of degree at most three a
+\emph{cubic density}. None of the sufficient conditions above applies
+directly to a unimodal cubic density $g$ with mean $1/3$ and a mode in
+$(0,1)$. Such a $g$ is not monotone. It is not symmetric and not bounded
+below by $1$, because a density on $[0,1]$ with either property has mean
+$1/2$, and it is not concave, because the only concave density on $[0,1]$
+with mean $1/3$ is $2(1-x)$ (Remark~\ref{rem:concave}). Two results of Wang
+and Wang reduce Theorem~\ref{thm:main} to a single density with an interior
+mode: the theorem on monotone densities, and the convexity of the set of
+$n$-CM distributions with a given mean~\cite[Proposition~2.1(3)]{WW11}. If
+$g$ is a cubic density with mean $1/3$ and $u=g'(0)$, $v=-g'(1)$, $w=g(1)$,
+then (Proposition~\ref{prop:decomp})
 \[
 g=\frac{3v}4A+6wB+\frac u4H,\qquad\frac{3v}4+6w+\frac u4=1,
 \]
@@ -130,16 +137,19 @@ A(x)=\tfrac{16}9-4x^2+\tfrac{20}9x^3,\qquad
 B(x)=\tfrac{11}6-5x^2+\tfrac{10}3x^3,\qquad
 H(x)=\tfrac43(1-x)^2(1+5x).
 \]
-The densities $A$ and $B$ are decreasing with mean $1/3$, so when $u$ and
-$v$ are nonnegative, $g$ is a convex combination of two decreasing densities
-and $H$. The density $H$ is neither monotone, nor symmetric, nor concave, and it
-vanishes at $x=1$, so it is not in any of the classes listed above. At $n=3$
-and mean $1/3$ these classes give nothing beyond monotone densities: a
-symmetric density on $[0,1]$ and a density bounded below by $1$ on $[0,1]$
-have mean $1/2$, and the only concave density on $[0,1]$ with mean $1/3$ is
-$2(1-x)$ (Remark~\ref{rem:concave}). The density $H$ is $3$-CM: put the
-coordinates of a Dirichlet$(2,2,1)$ vector in uniformly random order, and
-each coordinate of the result has density $H$ (Lemma~\ref{lem:H}).
+The densities $A$ and $B$ are decreasing with mean $1/3$, and $w\ge0$, so
+when $u$ and $v$ are nonnegative, $g$ is a convex combination of two
+decreasing densities and $H$. The density $H$ increases on $[0,1/5]$ and
+decreases on $[1/5,1]$. It is $3$-CM: put the coordinates of a
+Dirichlet$(2,2,1)$ vector in uniformly random order, and each coordinate of
+the result has density $H$ (Lemma~\ref{lem:H}). The density $H$ is also a
+mixture of a concave density on an interval $[0,b]$ with $b<1$ and a
+nonincreasing density on $[0,1]$, both with mean $1/3$
+(Proposition~\ref{prop:mixture}). So its complete mixability, and with it
+Theorem~\ref{thm:main}, also follows from the theorem of Puccetti, Wang and
+Wang on concave densities~\cite[Theorem~4.2]{PWW12}, the theorem of Wang and
+Wang on monotone densities and convexity; Lemma~\ref{lem:H} gives the
+coupling explicitly.
 
 Every $3$-CM density $f$ on $[0,1]$ with mean $1/3$ that is continuous at
 $0$ and $1$ satisfies $f(0)\ge2f(1)$. This follows from the norm condition
@@ -156,9 +166,12 @@ be dropped; see Section~\ref{sec:examples}.
 \section{Known results}
 
 \begin{lemma}[{\cite[Theorem~2.4]{WW11}}]\label{lem:monotone}
-If $f$ is a decreasing probability density on $[0,1]$ with mean at least
+If $f$ is a nonincreasing probability density on $[0,1]$ with mean at least
 $1/n$, then $f$ is $n$-CM.
 \end{lemma}
+
+In~\cite{WW11} the theorem is stated for a decreasing density, in the weak
+sense: for $n=2$ it covers the uniform density.
 
 \begin{lemma}[{\cite[Proposition~2.1(3)]{WW11}}]\label{lem:convex}
 If $F$ and $G$ are $n$-CM, both with mean $\mu$, then $\lambda
@@ -236,6 +249,58 @@ The density $q$ is $\tfrac13$ times the sum of the three Dirichlet$(2,2,1)$
 densities obtained by permuting the parameters, so $(X,Y,Z)$ is a
 Dirichlet$(2,2,1)$ vector with its coordinates put in uniformly random
 order.
+
+\begin{proposition}\label{prop:mixture}
+Let $b$ be the root in $(9/10,19/20)$ of
+\[
+Q(s)=4375s^4-11000s^3+9425s^2-3240s+432;
+\]
+it is the only root there, and $b\approx0.90702$. Then $H=cK+(1-c)D$ for
+some $c\in(0,1)$, where $K$ is a concave probability density on $[0,b]$ and
+$D$ is a nonincreasing probability density on $[0,1]$, both with mean $1/3$.
+Consequently $H$ is $3$-CM by~\cite[Theorem~4.2]{PWW12},
+Lemma~\ref{lem:monotone} and Lemma~\ref{lem:convex}.
+\end{proposition}
+
+\begin{proof}
+We have $H'(x)=4(1-x)(1-5x)$ and $H''(x)=8(5x-3)$. For
+$s\in[9/10,19/20]$ put $x_s=6/5-s\in[1/4,3/10]$. Then
+$H'(x)-H'(s)=4(x-s)(5x+5s-6)$, so $H'(x_s)=H'(s)<0$ and $H'(x)\le H'(s)$ for
+$x\in[x_s,s]$. Define
+\[
+\kappa_s(x)=
+\begin{cases}
+H(x)-H(x_s)-H'(s)(s-x_s), & 0\le x\le x_s,\\
+-H'(s)(s-x), & x_s\le x\le s,\\
+0, & s<x\le1,
+\end{cases}
+\]
+and $\delta_s=H-\kappa_s$. The two formulas for $\kappa_s$ agree at $x_s$,
+and so do their derivatives, both equal to $H'(s)$. Since $H''<0$ on
+$[0,3/5)\supset[0,x_s]$, the function $\kappa_s$ is concave on $[0,s]$. It
+vanishes at $s$, and $\kappa_s(0)>0$: as a polynomial in $s$, $\kappa_s(0)$
+equals $27/50$ at $s=9/10$ and has no root in $[9/10,19/20]$. So
+$\kappa_s>0$ on $[0,s)$. The function $\delta_s$ is constant on $[0,x_s]$,
+has derivative $H'(x)-H'(s)\le0$ on $[x_s,s]$, and equals $H$ on $[s,1]$,
+where $H$ is nonincreasing. Being continuous, $\delta_s$ is nonincreasing on
+$[0,1]$, and $\delta_s\ge H(1)=0$.
+
+Exact integration gives
+\[
+\int_0^1x\kappa_s(x)\,dx-\frac13\int_0^1\kappa_s(x)\,dx
+=-\frac{2(5s-1)Q(s)}{9375}.
+\]
+Since $Q(9/10)=27/16$ and $Q(19/20)=-1945/256$, and $Q$ has exactly one root
+in $[9/10,19/20]$, the root $b$ exists and is unique there, and $\kappa_b$
+has mean $1/3$ after normalization. The integral $c=\int_0^1\kappa_b$ is a
+value of a polynomial in $s$ that equals $999/2000$ at $s=9/10$ and
+$1891/6400$ at $s=19/20$ and takes neither the value $0$ nor the value $1$
+on $[9/10,19/20]$; so $0<c<1$. Put $K=\kappa_b/c$ and $D=\delta_b/(1-c)$.
+Then $K$ is a concave density on $[0,b]$ with mean $1/3$. Since $H$ has mean
+$1/3$, so does $D$, and $D$ is nonincreasing on $[0,1]$. By~\cite[Theorem~4.2]{PWW12}
+$K$ is $3$-CM, by Lemma~\ref{lem:monotone} $D$ is $3$-CM, and by
+Lemma~\ref{lem:convex} so is $H=cK+(1-c)D$.
+\end{proof}
 
 \begin{proposition}\label{prop:decomp}
 For $g$ as in~\eqref{eq:general} and $u,v,w$ as in~\eqref{eq:uvw},
@@ -446,9 +511,9 @@ comparing coefficients gives $u/4+3v/4+6w=30\mu-9$. A unimodal cubic
 density with mode in $(0,1)$ has $u,v,w\ge0$, so its mean is at least
 $3/10>1/4$. Hence a unimodal cubic density with mean $1/n\le1/4$ has mode
 $0$ (mode $1$ forces mean at least $1/2$, as in the proof of
-Theorem~\ref{thm:main}), and it is $n$-CM by Lemma~\ref{lem:monotone}. For
-$n=3$ and a mean in $(1/3,2/3)$ the question is open: is every unimodal
-cubic density on $[0,1]$ with such a mean $3$-CM?
+Theorem~\ref{thm:main}), and it is $n$-CM by Lemma~\ref{lem:monotone}. We do
+not know whether every unimodal cubic density on $[0,1]$ with mean in
+$(1/3,2/3)$ is $3$-CM.
 
 By Lemma~\ref{lem:necessary}, a $3$-CM density on $[0,1]$ with mean $1/3$
 that is continuous at the endpoints satisfies $f(0)\ge4f(1)$. For a cubic
@@ -472,11 +537,11 @@ The author holds equity in Heights Labs and in Convex Nexus Capital and has a ma
 
 \section*{Declaration of generative AI and AI-assisted technologies}
 
-This paper is part of a broader research project on proving open problems with AI systems. The work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}; the method is described in~\cite{MathBrainPaper}. The endpoint condition $f(0)\ge2f(1)$ also follows from the norm condition of Wang~\cite[Theorem~5]{Wan15}. OpenAI's Codex (GPT-6.1) proposed the decomposition of Proposition~\ref{prop:decomp}, the coupling of Lemma~\ref{lem:H}, the proofs of Lemma~\ref{lem:necessary} and the examples of Section~\ref{sec:examples}. A second Codex run audited them. Anthropic's Claude (Opus~5.5) checked every identity in exact arithmetic, read the cited results at their sources, and wrote the text. The result of~\cite{RU02} was read in the form given in~\cite[Theorem~2.2]{WW11}. The result of~\cite{GR81} and the remark of~\cite{BJW14} were read as reported in~\cite{Wan15}. The theorem on monotone densities and the convexity used here are due to Wang and Wang~\cite{WW11}. The question is Open Problem~10 of Wang~\cite{Wan15}. The new results are Theorem~\ref{thm:main}, the example of Theorem~\ref{thm:sharp} and inequality~\eqref{eq:nec2}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+This paper is part of a broader research project on proving open problems with AI systems. The work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}; the method is described in~\cite{MathBrainPaper}. OpenAI's Codex (GPT-6.1) proposed the decomposition of Proposition~\ref{prop:decomp}, the coupling of Lemma~\ref{lem:H}, the proofs of Lemma~\ref{lem:necessary} and the examples of Section~\ref{sec:examples}. A second Codex run audited them. A Claude audit run pointed out the mixture of Proposition~\ref{prop:mixture}. Anthropic's Claude (Opus~5.5) checked every identity in exact arithmetic, read the cited results at their sources, and wrote the text. The theorem on monotone densities and the convexity used here are due to Wang and Wang~\cite{WW11}, and the theorem on concave densities to Puccetti, Wang and Wang~\cite{PWW12}. The question is Open Problem~10 of Wang~\cite{Wan15}. The new results are the identity~\eqref{eq:decomp}, the coupling of Lemma~\ref{lem:H}, the example of Theorem~\ref{thm:sharp} and inequality~\eqref{eq:nec2}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
 \section*{Data and code availability}
 
-The script \texttt{check.py} is available at \url{https://github.com/yspennstate/unimodal-cubic-complete-mixability}. It uses exact rational arithmetic in SymPy. It checks the normal form~\eqref{eq:general}, the integrals and derivatives of $A$, $B$ and $H$, the marginal of the coupling in Lemma~\ref{lem:H}, the identity~\eqref{eq:decomp}, every value used in Section~\ref{sec:examples}, and the two identities of Section~\ref{sec:remarks}.
+The script \texttt{check.py} at \url{https://github.com/yspennstate/unimodal-cubic-complete-mixability/tree/cde3dcf01fd9e56927c308fa615c94e5eaef503d} checks in exact rational arithmetic every identity and value used in Sections~\ref{sec:proof}--\ref{sec:remarks}; its output is \texttt{check\_output.txt} in the same directory.
 
 \begin{thebibliography}{99}
 
@@ -491,6 +556,8 @@ The script \texttt{check.py} is available at \url{https://github.com/yspennstate
 \bibitem{PWW13} G.~Puccetti, B.~Wang and R.~Wang, \emph{Complete mixability and asymptotic equivalence of worst-possible VaR and ES estimates}, Insurance Math. Econom. \textbf{53} (2013), 821--828. doi:10.1016/j.insmatheco.2013.09.017.
 
 \bibitem{RU02} L.~R\"uschendorf and L.~Uckelmann, \emph{Variance minimization and random variables with constant sum}, in: Distributions with Given Marginals and Statistical Modelling, Kluwer, Dordrecht, 2002, 211--222. doi:10.1007/978-94-017-0061-0\_22.
+
+\bibitem{KS06} M.~Knott and C.~S.~Smith, \emph{Choosing joint distributions so that the variance of the sum is small}, J. Multivariate Anal. \textbf{97} (2006), 1757--1765. doi:10.1016/j.jmva.2006.01.004.
 
 \bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain}, public repository, 2026, \url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
 
