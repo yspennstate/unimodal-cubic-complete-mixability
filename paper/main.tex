@@ -114,15 +114,21 @@ The proof of Theorem~\ref{thm:main} rests on two known facts and one
 identity. The facts are the theorem of Wang and Wang on monotone densities
 and the convexity of the set of $n$-CM distributions with a given mean,
 also due to them~\cite[Proposition~2.1(3)]{WW11}. Call a density on $[0,1]$
-that is a polynomial of degree at most three a \emph{cubic density}. The
-identity of Proposition~\ref{prop:decomp} writes every cubic density of mean
-$1/3$ whose derivative is nonnegative at $0$ and nonpositive at $1$ as a
-convex combination of two explicit decreasing densities, given at the start
-of Section~\ref{sec:proof}, and the density
+that is a polynomial of degree at most three a \emph{cubic density}. If $g$
+is a cubic density with mean $1/3$ and $u=g'(0)$, $v=-g'(1)$, $w=g(1)$, then
+(Proposition~\ref{prop:decomp})
 \[
+g=\frac{3v}4A+6wB+\frac u4H,\qquad\frac{3v}4+6w+\frac u4=1,
+\]
+where
+\[
+A(x)=\tfrac{16}9-4x^2+\tfrac{20}9x^3,\qquad
+B(x)=\tfrac{11}6-5x^2+\tfrac{10}3x^3,\qquad
 H(x)=\tfrac43(1-x)^2(1+5x).
 \]
-The density $H$ is neither monotone, nor symmetric, nor concave, and it
+The densities $A$ and $B$ are decreasing with mean $1/3$, so when $u$ and
+$v$ are nonnegative, $g$ is a convex combination of two decreasing densities
+and $H$. The density $H$ is neither monotone, nor symmetric, nor concave, and it
 vanishes at $x=1$, so it is not in any of the classes listed above. At $n=3$
 and mean $1/3$ these classes give nothing beyond monotone densities: a
 symmetric density on $[0,1]$ and a density bounded below by $1$ on $[0,1]$
@@ -193,12 +199,7 @@ Set
 u=g'(0)=-2-c-\frac{9d}{10},\qquad v=-g'(1)=2-c-\frac{21d}{10},\qquad
 w=g(1)=\frac c6+\frac{3d}{10}.
 \end{equation}
-Consider the polynomials
-\[
-A(x)=\frac{16}9-4x^2+\frac{20}9x^3,\qquad
-B(x)=\frac{11}6-5x^2+\frac{10}3x^3,
-\]
-and the density $H$ of the introduction. Each of $A$, $B$ and $H$ has
+Consider the polynomials $A$, $B$ and $H$ of the introduction. Each of $A$, $B$ and $H$ has
 integral $1$ and mean $1/3$. Their derivatives are
 \[
 A'(x)=-\tfrac43x(6-5x),\qquad B'(x)=-10x(1-x),\qquad
