@@ -60,7 +60,7 @@ the distribution of a sum of dependent risks with fixed marginals; see the
 survey of Wang~\cite{Wan15} for the background and applications.
 
 If $F$ is $n$-CM and has mean $\mu$, the constant sum is $n\mu$. If $F$ is
-supported on $[a,b]$, with $a$ and $b$ the ends of its essential support,
+supported on $[a,b]$, with $a$ and $b$ the endpoints of its essential support,
 then the \emph{mean condition}
 \begin{equation}\label{eq:meancond}
 a+\frac{b-a}{n}\le\mu\le b-\frac{b-a}{n}
@@ -156,8 +156,7 @@ convexity give a second proof that $H$ is $3$-CM.
 
 Every $3$-CM density $f$ on $[0,1]$ with mean $1/3$ that is continuous at
 $0$ and $1$ satisfies $f(0)\ge2f(1)$. This follows from Wang's norm
-inequalities~\cite[Theorem~5]{Wan15} (see~\eqref{eq:wang}), so Wang's theorem
-already shows that a unimodal density of mean $1/3$, continuous at $0$ and
+inequalities~\cite[Theorem~5]{Wan15} (see~\eqref{eq:wang}), which therefore already show that a unimodal density of mean $1/3$, continuous at $0$ and
 $1$, with $f(0)<2f(1)$ is not $3$-CM. Theorem~\ref{thm:sharp} supplies such
 a density that is a polynomial of degree four and strictly positive on
 $[0,1]$. Lemma~\ref{lem:necessary} proves $f(0)\ge2f(1)$ directly, together
@@ -436,8 +435,7 @@ stronger one.
 Komisarski and Labuschagne~\cite[Corollary~2]{KL24} prove tail
 inequalities for random variables with constant sum: if
 $X_1+\dots+X_n=\tau$, then $\sum_{j\ne i}\PP(X_j<a_j)\ge\PP\bigl(X_i>\tau-\sum_{j\ne i}a_j\bigr)$
-for all real $a_1,\dots,a_n$ and every $i$; their Remark~1 derives
-from it the bounds on the center of a complete mix. For three variables with
+for all real $a_1,\dots,a_n$ and every $i$; their Remark~1 derives the mean condition~\eqref{eq:meancond} from it. For three variables with
 distribution $F$ and sum $1$, thresholds $a_j=a_k=\varepsilon$ give
 $2F(\varepsilon)\ge\PP(X>1-2\varepsilon)$, and letting $\varepsilon\to0$
 gives $f(0)\ge f(1)$ for a density continuous at $0$ and $1$.
