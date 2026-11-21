@@ -37,8 +37,8 @@ $3$-completely mixable. Such a density is either decreasing, and then
 $3$-completely mixable by a theorem of Wang and Wang, or a mixture of
 two decreasing densities and one explicit $3$-completely mixable density with
 an interior mode. Every $3$-completely mixable density $f$ on $[0,1]$ with mean
-$1/3$ that is continuous at $0$ and $1$ satisfies $f(0)\ge4f(1)$; Wang's norm
-inequalities give $f(0)\ge2f(1)$. A unimodal quartic density, strictly
+$1/3$ that is continuous at $0$ and $1$ satisfies $f(0)\ge4f(1)$; a theorem
+of Wang gives $f(0)\ge2f(1)$. A unimodal quartic density, strictly
 positive on $[0,1]$, violates the weaker inequality, so the degree bound
 cannot be raised. A quadratic density violates only the stronger one, so
 unimodality cannot be dropped.
@@ -65,7 +65,8 @@ then the \emph{mean condition}
 \begin{equation}\label{eq:meancond}
 a+\frac{b-a}{n}\le\mu\le b-\frac{b-a}{n}
 \end{equation}
-is necessary for $F$ to be $n$-CM~\cite[Proposition~2.1(7)]{WW11}. Wang and
+is necessary for $F$ to be $n$-CM~\cite[Proposition~2.1(7)]{WW11}. We call
+$a+(b-a)/n$ and $b-(b-a)/n$ the \emph{boundary means}. Wang and
 Wang~\cite[Theorem~2.4 and Corollary~2.9]{WW11} proved that it is also
 sufficient when $F$ has a monotone density on $[a,b]$. As they
 note~\cite[Section~1]{WW11}, symmetric unimodal densities were studied for
@@ -147,31 +148,53 @@ decreases on $[1/5,1]$. If the coordinates of a Dirichlet$(2,2,1)$ vector
 are put in uniformly random order, each coordinate of the result has
 density $H$, and the three coordinates sum to $1$, so $H$ is $3$-CM
 (Lemma~\ref{lem:H}). The density $H$ is also a mixture of a concave
-density on $[0,\beta]$, $\beta\approx0.907$, and a nonincreasing density
+density on $[0,\beta]$ for some $\beta\approx0.907$, and a nonincreasing density
 on $[0,1]$, both with mean $1/3$ (Proposition~\ref{prop:mixture}). The
 theorem of Puccetti, Wang and Wang on concave
 densities~\cite[Theorem~4.2]{PWW12}, applied to the first part, the
 theorem of Wang and Wang on monotone densities, applied to the second, and
 convexity give a second proof that $H$ is $3$-CM.
 
-Every $3$-CM density $f$ on $[0,1]$ with mean $1/3$ that is continuous at
-$0$ and $1$ satisfies $f(0)\ge2f(1)$. This follows from Wang's norm
-inequalities~\cite[Theorem~5]{Wan15} (see~\eqref{eq:wang}), which therefore already show that a unimodal density of mean $1/3$, continuous at $0$ and
-$1$, with $f(0)<2f(1)$ is not $3$-CM. Theorem~\ref{thm:sharp} supplies such
-a density that is a polynomial of degree four and strictly positive on
-$[0,1]$. Lemma~\ref{lem:necessary} proves $f(0)\ge2f(1)$ directly, together
-with $f(0)\ge4f(1)$, which improves it by a factor of two. We call these two
-inequalities the \emph{endpoint conditions}. The tail inequalities of Komisarski
-and Labuschagne~\cite[Corollary~2]{KL24} for variables with constant sum
-give $f(0)\ge f(1)$ (Section~\ref{sec:endpoint}). The quadratic density
-$r(x)=3-8x+6x^2$ satisfies the first endpoint condition and violates the second. So the unimodality assumption in Theorem~\ref{thm:main} cannot
-be dropped; see Section~\ref{sec:examples}. It is shown in~\cite[Proposition~3.1]{Shm26} that for bounded distributions the
-whole family of Wang's norm inequalities reduces to its $L^1$ case, and
-in~\cite[Theorem~1.4]{Shm26} that it does not imply $n$-complete
-mixability for $n=3,4$; the examples there are excluded by
-\cite[Lemma~5.1 and Proposition~5.4]{Shm26}, not by an endpoint condition. The density $r$ satisfies the whole family for $n=3$
-(Section~\ref{sec:endpoint}), so the second endpoint condition is a
-necessary condition that Wang's norm inequalities do not give.
+Wang~\cite[Theorem~5]{Wan15} proved two families of norm inequalities for
+$n$-CM distributions, stated in Section~\ref{sec:endpoint}; we call them
+Wang's norm inequalities. For a bounded distribution it is enough to check
+them for the $L^1$ norm~\cite[Proposition~3.1]{Shm26}. For a $3$-CM
+distribution on $[0,1]$ with mean $1/3$ and a random variable $X$ with this
+distribution, the $L^1$ members of the first family are
+\[
+\E\bigl(X-(1-2t)\bigr)_+\le2\,\E(t-X)_+\qquad\text{for every real }t,
+\]
+where $x_+=\max\{x,0\}$. If the distribution has a density $f$ that is
+continuous at $0$ and $1$, letting $t\downarrow0$ gives $f(0)\ge2f(1)$. So a
+unimodal density with mean $1/3$ that is continuous at $0$ and $1$ and has
+$f(0)<2f(1)$ is not $3$-CM, and Theorem~\ref{thm:sharp} supplies one that is
+a polynomial of degree four and strictly positive on $[0,1]$.
+Lemma~\ref{lem:necessary} removes the factor $2$ for small $t$,
+\[
+\E\bigl(X-(1-2t)\bigr)_+\le\E(t-X)_+\qquad\text{for }0<t<1/4,
+\]
+and therefore $f(0)\ge4f(1)$. We call $f(0)\ge2f(1)$ the first and
+$f(0)\ge4f(1)$ the second \emph{endpoint condition}. The tail inequalities
+of Komisarski and Labuschagne~\cite[Corollary~2]{KL24} for variables with
+constant sum give $f(0)\ge f(1)$ (Section~\ref{sec:endpoint}). The density
+$r(x)=3-8x+6x^2$ has mean $1/3$ and is not unimodal. It satisfies the first
+endpoint condition and violates the second, so it is not $3$-CM, and the
+unimodality assumption in Theorem~\ref{thm:main} cannot be dropped
+(Section~\ref{sec:examples}). It satisfies all of Wang's norm inequalities
+for $n=3$ (Section~\ref{sec:endpoint}), so the second endpoint condition
+does not follow from them. Distributions that satisfy Wang's norm
+inequalities and are not $n$-CM, for $n=3,4$, are given
+in~\cite[Theorem~1.4]{Shm26}; there complete mixability is excluded by a
+mass argument~\cite[Lemma~5.1 and Proposition~5.4]{Shm26}, not by an
+endpoint condition. For a bounded distribution with mean $\mu$ the $L^1$
+inequalities together say that $X$ is dominated by $n\mu-(n-1)X$ in the
+convex order~\cite[Theorem~1.3]{Shm26}, and Question~(1)
+of~\cite[Section~6]{Shm26} asks whether this domination implies
+$n$-complete mixability for unimodal densities that are not symmetric. The
+density of Theorem~\ref{thm:sharp} is not a counterexample, because it
+violates $f(0)\ge2f(1)$. For $n=3$ and unimodal cubic densities with mean
+$1/3$ the implication holds, because by Theorem~\ref{thm:main} all of them
+are $3$-CM.
 
 \section{Preliminaries}
 
@@ -180,8 +203,9 @@ If $f$ is a nonincreasing probability density on $[0,1]$ with mean at least
 $1/n$, then $f$ is $n$-CM.
 \end{lemma}
 
-In~\cite{WW11} the theorem is stated for a decreasing density, in the weak
-sense: for $n=2$ it covers the uniform density.
+In~\cite{WW11} `decreasing' allows flat parts: the last step of the proof
+of Theorem~2.4 there treats a decreasing density on $[0,1]$, extended by
+zero, as a decreasing density on $[0,a]$, $a\ge1$.
 
 \begin{lemma}[{\cite[Proposition~2.1(3)]{WW11}}]\label{lem:convex}
 If $F$ and $G$ are $n$-CM, both with mean $\mu$, then $\lambda
@@ -221,13 +245,18 @@ and $d$, as
 \begin{equation}\label{eq:general}
 g(x)=2+\frac c6+\frac d5-\Bigl(2+c+\frac{9d}{10}\Bigr)x+cx^2+dx^3.
 \end{equation}
-With $u$, $v$, $w$ as in the introduction, \eqref{eq:general} gives
+Put $u=g'(0)$, $v=-g'(1)$ and $w=g(1)$. Then \eqref{eq:general} gives
 \begin{equation}\label{eq:uvw}
 u=g'(0)=-2-c-\frac{9d}{10},\qquad v=-g'(1)=2-c-\frac{21d}{10},\qquad
 w=g(1)=\frac c6+\frac{3d}{10}.
 \end{equation}
-Consider the polynomials $A$, $B$ and $H$ of the introduction. Each of $A$, $B$ and $H$ has
-integral $1$ and mean $1/3$. Their derivatives are
+Let
+\[
+A(x)=\tfrac{16}9-4x^2+\tfrac{20}9x^3,\qquad
+B(x)=\tfrac{11}6-5x^2+\tfrac{10}3x^3,\qquad
+H(x)=\tfrac43(1-x)^2(1+5x).
+\]
+Each of $A$, $B$ and $H$ has integral $1$ and mean $1/3$. Their derivatives are
 \[
 A'(x)=-\tfrac43x(6-5x),\qquad B'(x)=-10x(1-x),\qquad
 H'(x)=4(1-x)(1-5x).
@@ -292,8 +321,11 @@ vanishes at $\sigma$, and $\kappa_\sigma(0)>0$, since
 \[
 \kappa_\sigma(0)=-\tfrac4{75}\bigl(625\sigma^3-1125\sigma^2+615\sigma-108\bigr)
 \]
-equals $27/50$ at $\sigma=9/10$ and its only real root is
-$\sigma\approx0.9677>19/20$. So
+is positive on $[9/10,19/20]$: with
+$\chi(\sigma)=625\sigma^3-1125\sigma^2+615\sigma-108$, the derivative
+$\chi'(\sigma)=1875\sigma^2-2250\sigma+615$ has roots
+$3/5\pm2\sqrt5/25<9/10$, so $\chi$ increases on $[9/10,19/20]$, and
+$\chi(19/20)=-205/64$; hence $\kappa_\sigma(0)\ge\tfrac4{75}\cdot\tfrac{205}{64}=\tfrac{41}{240}$. So
 $\kappa_\sigma>0$ on $[0,\sigma)$. The function $\delta_\sigma$ is constant on $[0,x_\sigma]$,
 has derivative $H'(x)-H'(\sigma)\le0$ on $[x_\sigma,\sigma]$, and equals $H$ on $[\sigma,1]$,
 where $H$ is nonincreasing. Being continuous, $\delta_\sigma$ is nonincreasing on
@@ -437,15 +469,19 @@ inequalities for random variables with constant sum: if
 $X_1+\dots+X_n=\tau$, then $\sum_{j\ne i}\PP(X_j<a_j)\ge\PP\bigl(X_i>\tau-\sum_{j\ne i}a_j\bigr)$
 for all real $a_1,\dots,a_n$ and every $i$; their Remark~1 derives the mean condition~\eqref{eq:meancond} from it. For three variables with
 distribution $F$ and sum $1$, thresholds $a_j=a_k=\varepsilon$ give
-$2F(\varepsilon)\ge\PP(X>1-2\varepsilon)$, and letting $\varepsilon\to0$
+$2\,\PP(X<\varepsilon)\ge\PP(X>1-2\varepsilon)$ for $X\sim F$, and letting $\varepsilon\to0$
 gives $f(0)\ge f(1)$ for a density continuous at $0$ and $1$.
 
 A law-determined norm is a map from random variables to $[0,\infty]$ that
 is a norm, takes the same value on identically distributed variables and
 is monotone on nonnegative variables~\cite[Definition~5]{Wan15}.
 Wang~\cite[Theorem~5]{Wan15} proved that if $F$ is $n$-CM with mean $\mu$
-and $X\sim F$, then $\|(X-s)_+\|\le(n-1)\|(X-s')_-\|$ for every
-law-determined norm $\|\cdot\|$, every $s\in\mathbb{R}$ and
+and $X\sim F$, then
+\[
+\|(X-s)_+\|\le(n-1)\|(X-s')_-\|\qquad\text{and}\qquad
+\|(X-s)_-\|\le(n-1)\|(X-s')_+\|
+\]
+for every law-determined norm $\|\cdot\|$, every $s\in\mathbb{R}$ and
 $s'=(n\mu-s)/(n-1)$. Take the $L^1$ norm, $n=3$, $\mu=1/3$ and $s=1-2t$, so
 that $s'=t$. This gives
 \begin{equation}\label{eq:wang}
@@ -470,16 +506,7 @@ $s\ge1$. It equals $(s+1)^2(3s^2-2s+7)/48$ for $-1\le s\le0$ and
 $(1-s)^2(7+26s-21s^2)/48$ for $0\le s\le1$, and both quadratic factors are
 positive on these intervals. So $r$ satisfies all of Wang's norm
 inequalities for $n=3$ and is not $3$-CM, and~\eqref{eq:nec2} does not
-follow from these inequalities. Other distributions that satisfy them and are not
-completely mixable are given in~\cite[Theorem~1.4]{Shm26}; there complete
-mixability is excluded by~\cite[Lemma~5.1 and Proposition~5.4]{Shm26}
-rather than by an endpoint condition. Question~(1) of~\cite[Section~6]{Shm26} asks whether domination of $X$ by
-$n\mu-(n-1)X$ in the convex order implies $n$-complete mixability for unimodal densities that are
-not symmetric. Theorem~\ref{thm:main} gives $3$-complete mixability for
-unimodal cubic densities with mean $1/3$ without assuming it. The quartic
-density of Theorem~\ref{thm:sharp} violates $f(0)\ge2f(1)$, which that
-domination implies through~\eqref{eq:wang}, so it does not answer that
-question.
+follow from these inequalities.
 
 \section{Examples}\label{sec:examples}
 
@@ -585,7 +612,7 @@ The author holds equity in Heights Labs and in Convex Nexus Capital and has a ma
 
 \section*{Declaration of generative AI and AI-assisted technologies}
 
-This paper is part of a broader research project on proving open problems with AI systems. The work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}; the method is described in~\cite{MathBrainPaper}. OpenAI's Codex (GPT-6.1) proposed the decomposition of Proposition~\ref{prop:decomp}, the coupling of Lemma~\ref{lem:H}, the proofs of Lemma~\ref{lem:necessary} and the examples of Section~\ref{sec:examples}. A second Codex run audited them. A Claude audit run proposed the mixture of Proposition~\ref{prop:mixture}. Anthropic's Claude (Opus~5.5) checked every identity in exact arithmetic, read at their sources the results used in the proofs, and wrote the text. The theorem on monotone densities and the convexity used here are due to Wang and Wang~\cite{WW11}, and the theorem on concave densities to Puccetti, Wang and Wang~\cite{PWW12}. The question is Open Problem~10 of Wang~\cite{Wan15}. The reduction of Wang's norm inequalities to their $L^1$ case for bounded distributions is from~\cite[Proposition~3.1]{Shm26}. The tail inequalities of Komisarski and Labuschagne~\cite[Corollary~2]{KL24} give $f(0)\ge f(1)$. The new results are the identity~\eqref{eq:decomp}, which reduces every unimodal cubic density with mean $1/3$ to $A$, $B$ and $H$, and the explicit coupling of Lemma~\ref{lem:H}. Also new are inequality~\eqref{eq:nec2}, the fact that $r$ satisfies all of Wang's norm inequalities for $n=3$, and the examples of Section~\ref{sec:examples}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+This paper is part of a broader research project on proving open problems with AI systems. The work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}; the method is described in~\cite{MathBrainPaper}. OpenAI's Codex (GPT-6.1) proposed the decomposition of Proposition~\ref{prop:decomp}, the coupling of Lemma~\ref{lem:H}, the proofs of Lemma~\ref{lem:necessary} and the examples of Section~\ref{sec:examples}. A second Codex run audited them. A Claude audit run proposed the mixture of Proposition~\ref{prop:mixture}. Anthropic's Claude (Opus~5.5) checked every identity in exact arithmetic, read at their sources the results used in the proofs, and wrote the text. The theorem on monotone densities and the convexity used here are due to Wang and Wang~\cite{WW11}, and the theorem on concave densities to Puccetti, Wang and Wang~\cite{PWW12}. The question is Open Problem~10 of Wang~\cite{Wan15}. The reduction of Wang's norm inequalities to their $L^1$ case for bounded distributions is from~\cite[Proposition~3.1]{Shm26}. The tail inequalities of Komisarski and Labuschagne~\cite[Corollary~2]{KL24} give $f(0)\ge f(1)$. The new results are the identity~\eqref{eq:decomp}, which reduces every unimodal cubic density with mean $1/3$ and an interior mode to $A$, $B$ and $H$, and the explicit coupling of Lemma~\ref{lem:H}. Also new are inequality~\eqref{eq:nec2}, the fact that $r$ satisfies all of Wang's norm inequalities for $n=3$, and the examples of Section~\ref{sec:examples}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
 \section*{Data and code availability}
 
